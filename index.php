@@ -94,16 +94,16 @@
               <?php
               // Define an array of image URLs
               $sliderImages = [
-                  "img/Rugove.jpg",
-                  "img/vjeshta.jpg",
-                  "img/Dimri.jpg"
+                "img/Rugove.jpg",
+                "img/vjeshta.jpg",
+                "img/Dimri.jpg"
               ];
 
-              foreach ($sliderImages as $index => $image):
+              foreach ($sliderImages as $index => $image) :
               ?>
-              <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
-                <img src="<?= $image ?>" class="d-block w-100" alt="Slider Image <?= $index ?>">
-              </div>
+                <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
+                  <img src="<?= $image ?>" class="d-block w-100" alt="Slider Image <?= $index ?>">
+                </div>
               <?php endforeach; ?>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
