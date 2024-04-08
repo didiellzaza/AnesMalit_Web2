@@ -51,10 +51,12 @@
 
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav">
-              <li class="nav-item active"><a class="nav-link" href="index.html">Ballina</a></li>
-              <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-              <li class="nav-item"><a class="nav-link" href="rreth-nesh.html">Rreth Nesh</a></li>
-              <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+
+              <li class="nav-item <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
+              <li class="nav-item <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
+              <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Rreth nesh</a></li>
+              <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Kontakt</a></li>
+              <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregimet</a></li>
             </ul>
           </div>
 
@@ -84,6 +86,11 @@
 
 
   </main>
+
+  <?php
+  // Set the current page variable
+  $currentPage = basename($_SERVER['PHP_SELF']);
+  ?>
 
 
   <form class="form-search form-search-position">
