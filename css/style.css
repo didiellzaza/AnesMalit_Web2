@@ -2304,3 +2304,135 @@ testimonial-col p {
   font-size: 13px;
   color: #777;
 }
+
+
+
+/*===================== tregimet page style =====================*/
+/*-------------------- tregimet banner start -------------------*/
+
+.tregimet-banner {
+  position: relative;
+}
+
+.tregimet-banner h4,
+.tregimet-banner h1,
+.tregimet-banner a {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.tregimet-banner h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.tregimet-banner h1 {
+  font-size: 37px;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 992px) {
+  .tregimet-banner h1 {
+    font-size: 48px;
+  }
+}
+
+.tregimet-banner-area {
+  height: 380px;
+  background: url("../img/storytelling.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 600px) {
+  .tregimet-banner-area {
+    height: 500px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .tregimet-banner-area {
+    height: 625px;
+  }
+}
+
+.tregimet-banner-area .tregimet-banner {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+}
+
+.tregimet-banner-area::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 2, 11, 0.7);
+  z-index: -1;
+}
+
+.tregimet-banner-btn {
+  border: 2px solid #cca772;
+  padding: 10px 45px;
+}
+
+.tregimet-banner-btn:hover {
+  background: #cca772;
+  color: #fff;
+}
+
+.tregimet-info__icon {
+  margin-right: 20px;
+}
+
+.tregimet-info__icon i,
+.tregimet-info__icon span {
+  color: #cca772;
+  font-size: 20px;
+}
+
+.tregimet-info .media-body h3 {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.tregimet-info .media-body h3 a {
+  color: #222222;
+}
+
+.tregimet-info .media-body p {
+  color: #999999;
+}
+
+/*-------------------- tregimet banner end -------------------*/
+
+.coheader{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  }
+
+  .udhetimetf{
+    margin:0 auto;
+    width:100%;
+    height:auto;
+    padding-top:11px;
+    padding-bottom:11px;
+    overflow:auto;
+    display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+  }
+  .udhetimetfcon{
+    width:300px;
+    height:auto;
+      padding:20px;
+  }
+
+  
