@@ -85,6 +85,96 @@
 
   </main>
 
+
+  <form class="form-search form-search-position">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 gutters-19">
+          <div class="form-group">
+            <input class="form-control" type="text" placeholder="Shtyp fjalet kyçe..." required>
+          </div>
+        </div>
+        <div class="col-lg-6 gutters-19">
+          <div class="row">
+            <div class="col-sm">
+              <div class="form-group">
+                <div class="form-select-custom">
+                  <select name="" id="">
+                    <option value="" disabled selected>Vështirësia</option>
+                    <option value="E vështire">E vështire</option>
+                    <option value="E lehtë">E lehtë</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm gutters-19">
+              <div class="form-group">
+                <div class="form-select-custom">
+                  <select name="" id="">
+                    <option value="" disabled selected>Aktiviteti</option>
+                    <option value="Hiking">Hiking</option>
+                    <option value="Sporte">Sporte</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm gutters-19">
+          <div class="form-group">
+            <div class="form-select-custom">
+              <select name="" id="">
+                <option value="" disabled selected>Data</option>
+                <option value="Janar 2023">Janar 2023</option>
+                <option value="Shkurt 2023">Shkurt 2023</option>
+                <option value="Mars 2023">Mars 2023</option>
+                <option value="Prill 2023">Prill 2023</option>
+                <option value="Maj 2023">Maj 2023</option>
+                <option value="Qershor 2023">Qershor 2023</option>
+                <option value="Korrik 2023">Korrik 2023</option>
+                <option value="Gusht 2023">Gusht 2023</option>
+                <option value="Shtator 2023">Shtator 2023</option>
+                <option value="Tetor 2023">Tetor 2023</option>
+                <option value="Nentor 2023">Nentor 2023</option>
+                <option value="Dhjetor 2023">Dhjetor 2023</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm gutters-19">
+          <div class="form-group">
+            <div class="form-select-custom">
+              <select name="" id="">
+                <option value="" disabled selected>Mosha</option>
+                <option value="-18">-18</option>
+                <option value="+18">+18</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm gutters-19">
+          <div class="form-group">
+            <div class="form-select-custom">
+              <select name="" id="">
+                <option value="" disabled selected>Pjesëmarrësit</option>
+                <option value="Vetëm">Vetëm</option>
+                <option value="Grup">Grup</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 gutters-19">
+          <div class="form-group">
+            <button class="button button-form" type="submit">KËRKO</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
   <section class="welcome">
     <div class="container">
       <div class="row align-items-center">
@@ -95,7 +185,7 @@
               // Define an array of image URLs
               $sliderImages = [
                 "img/Rugove.jpg",
-                "img/vjeshta.jpg",
+                "img/skijim.jpg",
                 "img/Dimri.jpg"
               ];
 
@@ -128,26 +218,196 @@
     </div>
   </section>
 
-  <form class="form-search form-search-position">
-    <!-- Form content -->
-  </form>
+  <div style="margin-left:625px;" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img src="img/logomin.png" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+  </div>
+
+  <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 
   <section class="section-margin">
-    <!-- Card content -->
+    <div class="container">
+      <div class="section-intro text-center pb-80px">
+        <div class="section-intro__style">
+
+          <!--<div class="section-intro__style">
+              <img src="img/logomin.png" alt style="width: 100px;">
+            </div>-->
+          <h2>Aktivitetet</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="card card-explore">
+              <div class="card-explore__img">
+                <img class="card-img" src="img/Camping.jpg" alt="Kampingu">
+              </div>
+              <div class="card-body">
+                <h3 class="card-explore__price">50€ <sub>/ 4 ditë</sub></h3>
+                <h4 class="card-explore__title"><a href="blog.html">Kampingu në male</a></h4>
+                <p>Mos u shqetëso për paisjet që të duhen apo transportin. Krejt cka te duhet është me u ba pjesë e grupit
+                  tonë. </p>
+                <a class="card-explore__link" href="blog.html">Më shumë <i class="ti-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="card card-explore">
+              <div class="card-explore__img">
+                <img class="card-img" src="img/Skijim.jpg" alt="Skijimi">
+              </div>
+              <div class="card-body">
+                <h3 class="card-explore__price">20€ <sub>/ Një ditë</sub></h3>
+                <h4 class="card-explore__title"><a href="blog.html">Skijimi</a></h4>
+                <p>Mos u shqetëso për paisjet që të duhen apo transportin. Krejt cka te duhet është me u ba pjesë e grupit
+                  tonë. </p>
+                <a class="card-explore__link" href="blog.html">Më shumë <i class="ti-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+            <div class="card card-explore">
+              <div class="card-explore__img">
+                <img class="card-img" src="img/Ciklizem.jpg" alt="Ciklizmi">
+              </div>
+              <div class="card-body">
+                <h3 class="card-explore__price">10€ <sub>/ Një ditë</sub></h3>
+                <h4 class="card-explore__title"><a href="blog.html">Ciklizmi</a></h4>
+                <p>Mos u shqetëso për paisjet që të duhen apo transportin. Krejt cka te duhet është me u ba pjesë e grupit
+                  tonë. </p>
+                <a class="card-explore__link" href="blog.html">Më shumë <i class="ti-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </section>
 
+  <!--Pjesa e eventeve-->
   <section class="section-padding bg-porcelain">
-    <!-- Event content -->
+    <div class="container">
+      <div class="section-intro text-center pb-80px">
+        <h2>Evente</h2>
+      </div>
+      <div class="special-img mb-30px">
+        <img class="img-fluid" src="img/Fotonatyre3.jpg" alt="Foto e natyres">
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="card card-special">
+            <div class="media align-items-center mb-1">
+              <span class="card-special__icon"><i class="ti-bell"></i></span>
+              <div class="media-body">
+                <h4 class="card-special__title">Maja e Musinces 1725m </h4>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>Detajet e Organizimit dhe Rezervimit:
+                Nisja: e Diel, 16.02.2023 / ora 07:00 Vendi i Nisjes:
+                Para parkingut të RTV 21 Lloji i Transportit:
+                Me Autobus Participimi për pjesëmarrje: 10 € (për person) Afati i Fundit për Rezervim: E Shtunë</p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="card card-special">
+            <div class="media align-items-center mb-1">
+              <span class="card-special__icon"><i class="ti-bell"></i></span>
+              <div class="media-body">
+                <h4 class="card-special__title">Maja e Lubotenit <br>2498 m</h4>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>Detajet e Organizimit dhe Rezervimit:
+                Nisja: e Diel, 20.04.2023 / ora 07:00 Vendi i Nisjes:
+                Para parkingut të RTV 21 Lloji i Transportit:
+                Me Autobus Participimi për pjesëmarrje: 10 € (për person) Afati i Fundit për Rezervim: E Shtunë</p>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 mb-4 mb-lg-0">
+          <div class="card card-special">
+            <div class="media align-items-center mb-1">
+              <span class="card-special__icon"><i class="ti-bell"></i></span>
+              <div class="media-body">
+                <h4 class="card-special__title">Bjeshkët e Rusolisë</h4>
+              </div>
+            </div>
+            <div class="card-body">
+              <p>Detajet e Organizimit dhe Rezervimit:
+                Nisja: e Diel, 16.02.2023 / ora 07:00 Vendi i Nisjes:
+                Para parkingut të RTV 21 Lloji i Transportit:
+                Me Autobus Participimi për pjesëmarrje: 10 € (për person) Afati i Fundit për Rezervim: E Shtunë</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!--SVG-->
   <img src="img/face-smile.svg" alt="My Happy SVG" />
 
+
   <!--Pjesa e Footer-->
   <footer class="footer-area section-gap">
-    <!-- Footer content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+          <h4>Donatorët</h4>
+          <ul>
+            <li><a href="https://www.super-viva.com/">Super Viva</a></li>
+            <li><a href="https://www.sabagroup.eu/">Saba Tours </a></li>
+            <li><a href="https://www.raiffeisen-kosovo.com/">Raiffeisen Bank</a></li>
+            <li><a href="https://rugove.eu/en/home-2/">Rugove</a></li>
+          </ul>
+        </div>
+        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+          <h4>Lidhjet</h4>
+          <ul>
+            <li><a href="https://theuiaa.org/">(UIAA)</a></li>
+            <li><a href="https://www.scouts.org.uk/">(SCOUTS)</a></li>
+            <li><a href="https://ifscc.org/">(IFSC)</a></li>
+            <li><a href="https://www.bmumagazine.com/">(BMU)</a></li>
+          </ul>
+        </div>
+        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="tel:44367916">+383 44 367 916</a></li>
+            <li><a href="mailto:AnesMAlit@gmail.com">AnesMalit@gmail.com</a></li>
+            <li><a href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed">
+                Anton Harapi, Nr 58, 10000 Prishtinë,</a></li>
+
+          </ul>
+        </div>
+        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+        </div>
+
+      </div>
+      <div class="footer-bottom row align-items-center text-center text-lg-left">
+        <p class="footer-text m-0 col-lg-8 col-md-12">Copyright &copy; All rights reserved | FIEK</p>
+        <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
+          <a href="https://www.facebook.com/diellza.raqi.5"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.linkedin.com/in/festina-mjeku-02754722a/"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/festina.mjeku/"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com/AnesMalit"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
   </footer>
+
 
   <script src="libs/jquery/jquery-3.2.1.min.js"></script>
   <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="js/m
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
