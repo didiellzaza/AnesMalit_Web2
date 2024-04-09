@@ -2310,6 +2310,8 @@ testimonial-col p {
 /*===================== tregimet page style =====================*/
 /*-------------------- tregimet banner start -------------------*/
 
+
+/*
 .tregimet-banner {
   position: relative;
 }
@@ -2409,8 +2411,115 @@ testimonial-col p {
 .tregimet-info .media-body p {
   color: #999999;
 }
+*/
 
 /*-------------------- tregimet banner end -------------------*/
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+.header1 {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.coheader {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.udhetimetf {
+  flex: 1 1 calc(50% - 20px);
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.udhetimetf:last-child {
+  margin-right: 0;
+}
+
+.udhetimetfcon {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.udhetimetf img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.udhetimetf h4 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.udhetimetf h5 {
+  margin-top: -5px;
+  font-size: 16px;
+}
+
+.udhetimetf p {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.titullih1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.video1 {
+  margin-bottom: 20px;
+}
+
+.button,
+.button1 {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.button {
+  width: 50px;
+  height: 50px;
+  background-image: url('play_button.png'); /* Replace 'play_button.png' with your actual play button image */
+  background-size: cover;
+}
+
+.button1 {
+  width: 50px;
+  height: 50px;
+  background-image: url('pause_button.png'); /* Replace 'pause_button.png' with your actual pause button image */
+  background-size: cover;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+
+
+
+
+
 
 .coheader{
   text-align: center;
