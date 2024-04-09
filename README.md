@@ -5,6 +5,6 @@ AnesMalit is a NGO commited to the promotion of Kosovo and Albania as hiking and
 A university team project made by 3 students (web 1)
 * Festina Mjeku
 + Rina Halili 
-- Diellza Raci
+- Diellza Raçi
 
-(Web 2: Rina Halili & Diellza Raci)
+(Web 2: Rina Halili & Diellza Raçi)
