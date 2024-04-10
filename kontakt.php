@@ -37,10 +37,11 @@
         <div class="container">
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav">
-              <li class="nav-item"><a class="nav-link" href="index.html">Ballina</a></li>
-              <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-              <li class="nav-item"><a class="nav-link" href="rreth-nesh.html">Rreth Nesh</a></li>
-              <li class="nav-item"><a class="nav-link active" href="kontakt.html">Kontakt</a></li>
+              <li class="nav-item <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
+              <li class="nav-item <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
+              <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
+              <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakt</a></li>
+              <li class="nav-item active<?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregimet</a></li>
             </ul>
           </div>
 
@@ -74,9 +75,7 @@
 
       <div class="mapouter">
         <div class="gmap_canvas">
-          <iframe width="600" height="500" id="gmap_canvas"
-            src="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed"
-            frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+          <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
           </iframe>
           <style>
             .mapouter {
@@ -130,8 +129,7 @@
           <form class="row contact_form" action="" method="post" id="contactForm" onclick="return ValidateForm();">
             <div class="col-md-6">
               <div class="form-group">
-                <input type="text" required="required" class="form-control" id="name" name="name"
-                  placeholder="Shkruani emrin e juaj">
+                <input type="text" required="required" class="form-control" id="name" name="name" placeholder="Shkruani emrin e juaj">
                 <span class="error_msg"></span>
               </div>
               <div class="form-group">
@@ -145,14 +143,12 @@
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <textarea class="form-control different-control" name="message" id="message" rows="5"
-                  placeholder="Shkruani mesazhin"></textarea>
+                <textarea class="form-control different-control" name="message" id="message" rows="5" placeholder="Shkruani mesazhin"></textarea>
                 <span class="error_msg"></span>
               </div>
             </div>
             <div class="col-md-12 text-right">
-              <button type="button" onclick="sendEmail()" value="submit"
-                class="button-contact"><span>Dergo</span></button>
+              <button type="button" onclick="sendEmail()" value="submit" class="button-contact"><span>Dergo</span></button>
             </div>
           </form>
         </div>
@@ -187,8 +183,7 @@
           <ul>
             <li><a href="tel:44367916">+383 44 367 916</a></li>
             <li><a href="mailto:AnesMalit@gmail.com">AnesMalit@gmail.com</a></li>
-            <li><a
-                href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed">
+            <li><a href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed">
                 Lakrishte, 10000 Prishtinë</a></li>
 
           </ul>
@@ -213,6 +208,18 @@
   <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
 
   <script type="text/javascript">
+    // PHP duke perdorur variablat globale
+    var emailMessage = '<?php
+                        $subject = "Message from website contact form";
+                        $message = "You have received a message from the website contact form:\n\n";
+                        $message .= "Name: " . $_POST['name'] . "\n";
+                        $message .= "Email: " . $_POST['email'] . "\n";
+                        $message .= "Subject: " . $_POST['subject'] . "\n";
+                        $message .= "Message: " . $_POST['message'] . "\n";
+                        echo addslashes($message);
+                        ?>';
+
+    // JavaScript funksioni per dergim te email-it
     function sendEmail() {
       Email.send({
         Host: "smtp.elasticemail.com",
@@ -223,10 +230,19 @@
         Subject: document.getElementById("subject").value,
         Body: document.getElementById("message").value
       }).then(
-        message => alert("Formulari u dergua me sukses!")
+        function(message) {
+          console.log("Email sent successfully:", message);
+          alert("Formulari u dergua me sukses!");
+        },
+        function(error) {
+          console.error("Error sending email:", error);
+          alert("Ka ndodhur një gabim gjatë dërgimit të formularit. Ju lutemi provoni përsëri më vonë.");
+        }
       );
     }
   </script>
+
+
 
   <script src="libs/jquery/jquery-3.2.1.min.js"></script>
   <script src="js/main.js"></script>

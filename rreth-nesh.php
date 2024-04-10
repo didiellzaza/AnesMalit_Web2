@@ -62,10 +62,11 @@
         <div class="container">
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav">
-              <li class="nav-item"><a class="nav-link" href="index.html">Ballina</a></li>
-              <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-              <li class="nav-item active"><a class="nav-link" href="rreth-nesh.html">Rreth Nesh</a></li>
-              <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+              <li class="nav-item <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
+              <li class="nav-item <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
+              <li class="nav-item active <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
+              <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakt</a></li>
+              <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregimet</a></li>
               </li>
             </ul>
           </div>
@@ -152,29 +153,43 @@
   <section class="testimonials">
     <h2 style="margin-bottom:30px;">Stafi</h2>
 
-    <div class="row" style="display:flex; justify-content: center;">
-      <div class="testimonial-col" style="margin-right:5px; width: 1200px;">
-        <img src="img/diellza.jpg">
-        <div>
-          <p>“Nese mendon se aventura eshte e rrezikshme, provo rutinen, eshte vdekjeprurese.”</p>
-          <h4 style="color: #004034;">Diellza Raçi</h4>
-        </div>
-      </div>
-      <div class="testimonial-col" style="margin-right:5px; width: 1200px;">
-        <img src="img/rina.jpg">
-        <div>
-          <p>“Nëse vërtet e do natyrën, ti mund të gjesh bukurinë e saj kudo”.</p>
-          <h4 style="color: #004034;">Rina Halili</h4>
-        </div>
-      </div>
-      <div class="testimonial-col" style="margin-left:5px; width: 1200px;">
-        <img src="img/festina.jpg">
-        <div>
-          <p>You can't climb up a mountain with downhill thoughts!</p>
-          <h4 style="color: #004034;">Festina Mjeku</h4>
-        </div>
-      </div>
-    </div>
+    <?php
+    // Staff comments array
+    $staffComments = array(
+      array(
+        'name' => 'Diellza',
+        'comment' => '“Nese mendon se aventura eshte e rrezikshme, provo rutinen, eshte vdekjeprurese.”'
+      ),
+      array(
+        'name' => 'Rina',
+        'comment' => '“Nëse vërtet e do natyrën, ti mund të gjesh bukurinë e saj kudo”.'
+      ),
+      array(
+        'name' => 'Festina',
+        'comment' => 'You can\'t climb up a mountain with downhill thoughts!'
+      )
+    );
+
+
+    function sortByStaffName($a, $b)
+    {
+      return strcmp($a['name'], $b['name']);
+    }
+
+
+    usort($staffComments, 'sortByStaffName');
+
+
+    foreach ($staffComments as $staff) {
+      echo '<div class="testimonial-col" style="margin-right:5px; width: 1200px;">';
+      echo '<img src="img/' . strtolower(str_replace(' ', '', $staff['name'])) . '.jpg">';
+      echo '<div>';
+      echo '<p>' . $staff['comment'] . '</p>';
+      echo '<h4 style="color: #004034;">' . $staff['name'] . '</h4>';
+      echo '</div>';
+      echo '</div>';
+    }
+    ?>
   </section>
 
   <!--Tabela per majat e shkelura-->
@@ -203,9 +218,6 @@
       </tr>
     </table>
   </div>
-
-
-
 
   <!--Pjesa e Footer-->
   <footer class="footer-area section-gap">

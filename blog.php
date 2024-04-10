@@ -39,10 +39,11 @@
                 <div class="container">
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Ballina</a></li>
-                            <li class="nav-item active"><a class="nav-link" href="blog.html">Blog</a></li>
-                            <li class="nav-item"><a class="nav-link" href="rreth-nesh.html">Rreth Nesh</a></li>
-                            <li class="nav-item"><a class="nav-link" href="kontakt.html">Kontakt</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
+                            <li class="nav-item active <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakt</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregimet</a></li>
                             </li>
                         </ul>
                     </div>
@@ -66,6 +67,9 @@
                 </div>
             </div>
         </div>
+
+
+
     </section>
 
     <!--Kategorite e blogut-->
@@ -77,7 +81,7 @@
                         <img class="card-img rounded-0" src="img/Vera.jpg" alt="Vera">
                         <div class="categories_details">
                             <div class="categories_text">
-                                <a href="blog-artikulli.html">
+                                <a href="blog-artikulli.php">
                                     <h5>Vera</h5>
                                 </a>
                                 <div class="border_line"></div>
@@ -91,7 +95,7 @@
                         <img class="card-img rounded-0" src="img/kategoriavjeshte.jpg" alt="Vjeshta">
                         <div class="categories_details">
                             <div class="categories_text">
-                                <a href="blog-artikulli.html">
+                                <a href="blog-artikulli.php">
                                     <h5>Vjeshta</h5>
                                 </a>
                                 <div class="border_line"></div>
@@ -105,7 +109,7 @@
                         <img class="card-img rounded-0" src="img/Dimri.jpg" alt="Dimri">
                         <div class="categories_details">
                             <div class="categories_text">
-                                <a href="blog-artikulli.html">
+                                <a href="blog-artikulli.php">
                                     <h5>Dimri</h5>
                                 </a>
                                 <div class="border_line"></div>
@@ -128,29 +132,29 @@
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
                                     <div class="post_tag">
-                                        <a href="blog-artikulli.html">Kamping,</a>
-                                        <a class="active" href="blog-artikulli.html">Vera,</a>
-                                        <a href="blog-artikulli.html">Rugove,</a>
-                                        <a href="blog-artikulli.html">Gusht</a>
+                                        <a href="blog-artikulli.php">Kamping,</a>
+                                        <a class="active" href="blog-artikulli.php">Vera,</a>
+                                        <a href="blog-artikulli.php">Rugove,</a>
+                                        <a href="blog-artikulli.php">Gusht</a>
                                     </div>
                                     <ul class="blog_meta list">
                                         <li>
-                                            <a href="blog-artikulli.html">Diellza Raçi
+                                            <a href="blog-artikulli.php">Diellza Raçi
                                                 <i class="lnr lnr-user"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-artikulli.html">23 Gusht, 2022
+                                            <a href="blog-artikulli.php">23 Gusht, 2022
                                                 <i class="lnr lnr-calendar-full"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-artikulli.html">52 Shikime
+                                            <a href="blog-artikulli.php">52 Shikime
                                                 <i class="lnr lnr-eye"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-artikulli.html">09 Komente
+                                            <a href="blog-artikulli.php">09 Komente
                                                 <i class="lnr lnr-bubble"></i>
                                             </a>
                                         </li>
@@ -161,12 +165,12 @@
                                 <div class="blog_post">
                                     <img src="img/kampi.jpg" alt="Kampi">
                                     <div class="blog_details">
-                                        <a href="blog-artikulli.html">
+                                        <a href="blog-artikulli.php">
                                             <h2>Kampi Internacional, Rugove 2022</h2>
                                         </a>
                                         <p>Kete Gusht organizuam Kampin Internacional
                                             ne Rugove, me pjesetare nga mbare Evropa.</p>
-                                        <a class="button button-blog" href="blog-artikulli.html">Shiko artikullin e
+                                        <a class="button button-blog" href="blog-artikulli.php">Shiko artikullin e
                                             plote</a>
                                     </div>
                                 </div>
@@ -176,29 +180,29 @@
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
                                     <div class="post_tag">
-                                        <a href="blog-artikulli.html">Yoga,</a>
-                                        <a class="active" href="blog-artikulli.html">Vera,</a>
-                                        <a href="blog-artikulli.html">Prevallë,</a>
-                                        <a href="blog-artikulli.html">Korrik</a>
+                                        <a href="blog-artikulli.php">Yoga,</a>
+                                        <a class="active" href="blog-artikulli.php">Vera,</a>
+                                        <a href="blog-artikulli.php">Prevallë,</a>
+                                        <a href="blog-artikulli.php">Korrik</a>
                                     </div>
                                     <ul class="blog_meta list">
                                         <li>
-                                            <a href="blog-artikulli.html">Rina Halili
+                                            <a href="blog-artikulli.php">Rina Halili
                                                 <i class="lnr lnr-user"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-artikulli.html">25 Korrik, 2022
+                                            <a href="blog-artikulli.php">25 Korrik, 2022
                                                 <i class="lnr lnr-calendar-full"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-artikulli.html">78 Shikime
+                                            <a href="blog-artikulli.php">78 Shikime
                                                 <i class="lnr lnr-eye"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-artikulli.html">22 Komente
+                                            <a href="blog-artikulli.php">22 Komente
                                                 <i class="lnr lnr-bubble"></i>
                                             </a>
                                         </li>
@@ -214,7 +218,7 @@
                                         </a>
                                         <p>Gjate punetorise Yoga, u befasuam me pjesemarresit nga thuajse te gjitha
                                             kategorite e moshave.</p>
-                                        <a href="blog-artikulli.html" class="button button-blog">Shiko artikullin e plote</a>
+                                        <a href="blog-artikulli.php" class="button button-blog">Shiko artikullin e plote</a>
                                     </div>
                                 </div>
                             </div>
@@ -223,29 +227,29 @@
                             <div class="col-md-3">
                                 <div class="blog_info text-right">
                                     <div class="post_tag">
-                                        <a href="blog-artikulli.html">Hiking,</a>
-                                        <a class="active" href="blog-artikulli.html">Vera,</a>
-                                        <a href="blog-artikulli.html">Brod,</a>
-                                        <a href="blog-artikulli.html">Qershor</a>
+                                        <a href="blog-artikulli.php">Hiking,</a>
+                                        <a class="active" href="blog-artikulli.php">Vera,</a>
+                                        <a href="blog-artikulli.php">Brod,</a>
+                                        <a href="blog-artikulli.php">Qershor</a>
                                     </div>
                                     <ul class="blog_meta list">
                                         <li>
-                                            <a href="blog-artikulli.html">Festina Mjeku
+                                            <a href="blog-artikulli.php">Festina Mjeku
                                                 <i class="lnr lnr-user"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-artikulli.html">22 Qershor, 2021
+                                            <a href="blog-artikulli.php">22 Qershor, 2021
                                                 <i class="lnr lnr-calendar-full"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-artikulli.html">112 Shikime
+                                            <a href="blog-artikulli.php">112 Shikime
                                                 <i class="lnr lnr-eye"></i>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="blog-artikulli.html">31 Komente
+                                            <a href="blog-artikulli.php">31 Komente
                                                 <i class="lnr lnr-bubble"></i>
                                             </a>
                                         </li>
@@ -256,11 +260,11 @@
                                 <div class="blog_post">
                                     <img src="img/Vera.jpg" alt="Vera">
                                     <div class="blog_details">
-                                        <a href="blog-artikulli.html">
+                                        <a href="blog-artikulli.php">
                                             <h2>A ka me mire se me e nise veren me hiking ne Brod?</h2>
                                         </a>
                                         <p>22 Qershorin e kaluam duke ecur maleve te Brodit.</p>
-                                        <a href="blog-artikulli.html" class="button button-blog">Shiko artikullin e plote</a>
+                                        <a href="blog-artikulli.php" class="button button-blog">Shiko artikullin e plote</a>
                                     </div>
                                 </div>
                             </div>
@@ -339,7 +343,7 @@
                             <h3 class="widget_title">Postimet me te klikuara</h3>
                             <div class="media post_item">
                                 <div class="media-body">
-                                    <a href="blog-artikulli.html">
+                                    <a href="blog-artikulli.php">
                                         <h3>Kampi Internacional, Rugove 2022</h3>
                                     </a>
                                     <p>5 muaj me pare</p>
@@ -348,7 +352,7 @@
                             <div class="media post_item">
 
                                 <div class="media-body">
-                                    <a href="blog-artikulli.html">
+                                    <a href="blog-artikulli.php">
                                         <h3>Ne i bekojme Bjeshket e Nemuna ;)
                                         </h3>
                                     </a>
@@ -358,7 +362,7 @@
                             <div class="media post_item">
 
                                 <div class="media-body">
-                                    <a href="blog-artikulli.html">
+                                    <a href="blog-artikulli.php">
                                         <h3>Jave e paharrueshme me alpinista fantastik</h3>
                                     </a>
                                     <p>3 jave me pare</p>
@@ -440,19 +444,27 @@
         </div>
     </footer>
 
+
+
+    <!--
     <script>
         // Define a PHP array containing paths to your banner images
         <?php
+        /*
         $slideArray = [
             "img/noti.jpg",
             "img/Camping.jpg",
             "img/Ciklizem.jpg"
         ];
+        */
         ?>
 
         // Output the JavaScript array using PHP
-        var slideArray = ['img/noti.jpg', 'img/Camping.jpg', 'img/Ciklizem.jpg'
+        var slideArray = [
+
+            
             <?php
+            /*
             // Loop through the PHP array and output image paths
             foreach ($slideArray as $index => $imagePath) {
                 // Add each image path to the JavaScript array
@@ -462,7 +474,9 @@
                     echo ",";
                 }
             }
+            */
             ?>
+            
         ];
 
         // Function to display banners
@@ -477,6 +491,8 @@
             displayBanner();
         };
     </script>
+
+    -->
 
     <script src="libs/jquery/jquery-3.2.1.min.js"></script>
     <script src="libs/bootstrap/bootstrap.bundle.min.js"></script>
