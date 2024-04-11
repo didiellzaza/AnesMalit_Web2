@@ -2670,7 +2670,7 @@ p {
 }
 
 .udhetimetf {
-  flex: 1 1 calc(50% - 20px);
+ /* flex: 1 1 calc(50% - 20px); */
   margin-right: 20px;
   margin-bottom: 20px;
 }
@@ -2763,9 +2763,10 @@ p {
 
   .udhetimetf{
     margin:0 auto;
+    margin-top: 30px;
     width:100%;
     height:auto;
-    padding-top:11px;
+    padding-top:50px;
     padding-bottom:11px;
     overflow:auto;
     display:flex;

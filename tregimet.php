@@ -62,7 +62,7 @@
         <div class="coheader">
             <div class="udhetimetf">
                 <div class="udhetimetfcon">
-                    <img src="tregimet/ldquo-the-telegraph-rdquo-artikull-p-euml-r-bjeshk-euml-t-e-nemuna-do-ndjeheni-t-euml-bekuar-kur-ti-vizitoni-foto_hd.jpg" height="184" width="319" alt="Keshille">
+                    <img src="img/Fotonatyre.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;"><?php
 
                                                     class Tregim
@@ -74,10 +74,9 @@
                                                         }
                                                     }
 
-                                                    // create an object
                                                     $objekti = new Tregim();
 
-                                                    // show object properties
+
                                                     echo $objekti->titull;
                                                     ?></h4>
                     <h5 style="margin-top:-8px; text-align:left;">Ne malet e bogës</h5>
@@ -86,12 +85,12 @@
                     </p>
                 </div>
                 <div class="udhetimetfcon">
-                    <img src="img/Fotonatyre.jpg" height="184" width="319" alt="Keshille">
+                    <img src="img/lubeteni.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h5 style="
 margin-top:-8px; text-align:left;">
                         <?php
-                        // case-sensitive constant name
+
                         define("TREGIM", "Lybeteni ne Verë");
                         echo TREGIM;
                         ?> </h5>
@@ -175,7 +174,7 @@ margin-top:-8px; text-align:left;">
                 </div>
 
                 <div class="udhetimetfcon">
-                    <img src="img/Fotonatyre3.jpg" height="184" width="319" alt="Keshille">
+                    <img src="img/shpella.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h5 style="
 margin-top:-8px; text-align:left;">Shpella e Gadimes</h5>
@@ -183,7 +182,7 @@ margin-top:-8px; text-align:left;">Shpella e Gadimes</h5>
                         Për ta vizituar brendësinë e saj të duhen vetëm pak minuta, mirëpo për të dëgjuar ciceronin dhe për të parë nga afër çdo stalaktit dhe stalagmit, kjo të merrte kohë më shumë.Pikat e ujit rridhnin mbi kokat e vizitorëve, e kjo nga ciceronët shpjegohej si ‘fatsjellës’.
                 </div>
                 <div class="udhetimetfcon">
-                    <img src="img/noti.jpg" height="184" width="319" alt="Keshille">
+                    <img src="img/ujevara.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h5 style="
 margin-top:-8px; text-align:left;">Ujevara e Mirushes</h5>
@@ -200,7 +199,7 @@ margin-top:-8px; text-align:left;">Ujevara e Mirushes</h5>
                 <br>
                 <div class="udhetimetfcon">
 
-                    <img src="img/Dimri.jpg" height="184" width="319" alt="Keshille">
+                    <img src="img/Prizren.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h5 style="
 margin-top:-8px; text-align:left;">Prizereni Naten</h5>
@@ -252,7 +251,7 @@ margin-top:-8px; text-align:left;"><?php
                     </p>
                 </div>
                 <div class="udhetimetfcon">
-                    <img src="img/jazhince.jpg" height="184" width="319" alt="Keshille">
+                    <img src="img/Mbremje_natyre.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h5 style="
 margin-top:-8px; text-align:left;">Mbremje ne natyre</h5>
