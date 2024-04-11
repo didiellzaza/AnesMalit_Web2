@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="libs/linericon/style.css">
     <link rel="stylesheet" href="css/style.css">
 
-    <link href="tregimet/t_style.css" rel="stylesheet" type="text/css" />
+
 
 </head>
 
@@ -39,10 +39,11 @@
                 <div class="container">
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav">
-                            <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="blog.php">Blog</a></li>
-                            <li class="nav-item active"><a class="nav-link" href="tregimet.php">Tregimet</a></li>
-                            <li class="nav-item"><a class="nav-link" href="kontakt.php">Kontakt</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakt</a></li>
+                            <li class="nav-item active <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregimet</a></li>
                         </ul>
                     </div>
 
@@ -85,7 +86,7 @@
                     </p>
                 </div>
                 <div class="udhetimetfcon">
-                    <img src="tregimet/61841131.jpg" height="184" width="319" alt="Keshille">
+                    <img src="img/Fotonatyre.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h5 style="
 margin-top:-8px; text-align:left;">
@@ -103,7 +104,7 @@ margin-top:-8px; text-align:left;">
 
                 </div>
                 <div class="udhetimetfcon">
-                    <img src="tregimet/20140504113309516577.jpg" height="184" width="319" alt="Keshille">
+                    <img src="img/Fotonatyre1.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h5 style="
 margin-top:-8px; text-align:left;">
@@ -136,7 +137,7 @@ margin-top:-8px; text-align:left;">
                 <br>
                 <div class="udhetimetfcon">
 
-                    <img src="tregimet/8494-366755363425181-2046158788-n.jpg" height="184" width="319" alt="Keshille">
+                    <img src="img/Fotonatyre2.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h5 style="
 margin-top:-8px; text-align:left;">
@@ -174,7 +175,7 @@ margin-top:-8px; text-align:left;">
                 </div>
 
                 <div class="udhetimetfcon">
-                    <img src="tregimet/Shpella-e-Gadimes-500x375.jpg" height="184" width="319" alt="Keshille">
+                    <img src="img/Fotonatyre3.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h5 style="
 margin-top:-8px; text-align:left;">Shpella e Gadimes</h5>
@@ -182,7 +183,7 @@ margin-top:-8px; text-align:left;">Shpella e Gadimes</h5>
                         Për ta vizituar brendësinë e saj të duhen vetëm pak minuta, mirëpo për të dëgjuar ciceronin dhe për të parë nga afër çdo stalaktit dhe stalagmit, kjo të merrte kohë më shumë.Pikat e ujit rridhnin mbi kokat e vizitorëve, e kjo nga ciceronët shpjegohej si ‘fatsjellës’.
                 </div>
                 <div class="udhetimetfcon">
-                    <img src="tregimet/10636294-10205427513384576-5474175721003250463-n.jpg" height="184" width="319" alt="Keshille">
+                    <img src="img/noti.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h5 style="
 margin-top:-8px; text-align:left;">Ujevara e Mirushes</h5>
@@ -199,7 +200,7 @@ margin-top:-8px; text-align:left;">Ujevara e Mirushes</h5>
                 <br>
                 <div class="udhetimetfcon">
 
-                    <img src="tregimet/bild3.jpg" height="184" width="319" alt="Keshille">
+                    <img src="img/Dimri.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h5 style="
 margin-top:-8px; text-align:left;">Prizereni Naten</h5>
@@ -216,7 +217,7 @@ margin-top:-8px; text-align:left;">Prizereni Naten</h5>
                 </div>
 
                 <div class="udhetimetfcon">
-                    <img src="tregimet/Images.jpg" height="184" width="319" alt="Keshille">
+                    <img src="img/Ciklizem.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h5 style="
 margin-top:-8px; text-align:left;"><?php
@@ -251,7 +252,7 @@ margin-top:-8px; text-align:left;"><?php
                     </p>
                 </div>
                 <div class="udhetimetfcon">
-                    <img src="tregimet/7f37a2f8226844bd9c613340630bf59f.jpg" height="184" width="319" alt="Keshille">
+                    <img src="img/jazhince.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h5 style="
 margin-top:-8px; text-align:left;">Mbremje ne natyre</h5>
@@ -272,13 +273,7 @@ margin-top:-8px; text-align:left;">Mbremje ne natyre</h5>
 
 
 
-                <div class="udhetimetf " style="margin-top:auto;">
 
-                    <div class="titullih1">VIDEO<img src="images/hline.png" style="z-index:-1; width:100%; height:1px;"></div>
-                    <br>
-                    <br>
-                    <!-- Add more tregimet content here -->
-                </div>
             </div>
         </div>
 
@@ -328,7 +323,6 @@ margin-top:-8px; text-align:left;">Mbremje ne natyre</h5>
                 </div>
             </div>
         </footer>
-
 
 </body>
 
