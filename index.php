@@ -84,42 +84,42 @@ if (isset($_GET['lang'])) {
         <div class="container">
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav">
-              <?php if ($language === "fr"): ?>
+              <?php if ($language === "fr") : ?>
                 <li class="nav-item active <?php if ($currentPage === 'index.php')
-                  echo 'active'; ?>"><a class="nav-link" href="index.php">Accueil</a></li>
+                                              echo 'active'; ?>"><a class="nav-link" href="index.php">Accueil</a></li>
                 <li class="nav-item <?php if ($currentPage === 'blog.php')
-                  echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogue</a></li>
+                                      echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogue</a></li>
                 <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
-                  echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">À propos de nous</a></li>
+                                      echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">À propos de nous</a></li>
                 <li class="nav-item <?php if ($currentPage === 'kontakt.php')
-                  echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
+                                      echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
                 <li class="nav-item <?php if ($currentPage === 'tregimet.php')
-                  echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Histoires</a></li>
+                                      echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Histoires</a></li>
 
 
-              <?php elseif ($language === "al"): ?>
+              <?php elseif ($language === "al") : ?>
                 <li class="nav-item active <?php if ($currentPage === 'index.php')
-                  echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
+                                              echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
                 <li class="nav-item <?php if ($currentPage === 'blog.php')
-                  echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogu</a></li>
+                                      echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogu</a></li>
                 <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
-                  echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
+                                      echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
                 <li class="nav-item <?php if ($currentPage === 'kontakt.php')
-                  echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakti</a></li>
+                                      echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakti</a></li>
                 <li class="nav-item <?php if ($currentPage === 'tregimet.php')
-                  echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregime</a></li>
+                                      echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregime</a></li>
 
-              <?php else: ?>
+              <?php else : ?>
                 <li class="nav-item active <?php if ($currentPage === 'index.php')
-                  echo 'active'; ?>"><a class="nav-link" href="index.php">Home</a></li>
+                                              echo 'active'; ?>"><a class="nav-link" href="index.php">Home</a></li>
                 <li class="nav-item <?php if ($currentPage === 'blog.php')
-                  echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
+                                      echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
                 <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
-                  echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">About Us</a></li>
+                                      echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">About Us</a></li>
                 <li class="nav-item <?php if ($currentPage === 'kontakt.php')
-                  echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
+                                      echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
                 <li class="nav-item <?php if ($currentPage === 'tregimet.php')
-                  echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Stories</a></li>
+                                      echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Stories</a></li>
 
               <?php endif; ?>
             </ul>
@@ -269,8 +269,8 @@ if (isset($_GET['lang'])) {
                 "img/Dimri.jpg"
               ];
 
-              foreach ($sliderImages as $index => $image):
-                ?>
+              foreach ($sliderImages as $index => $image) :
+              ?>
                 <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
                   <img src="<?= $image ?>" class="d-block w-100" alt="Slider Image <?= $index ?>">
                 </div>
@@ -467,8 +467,7 @@ if (isset($_GET['lang'])) {
           <ul>
             <li><a href="tel:44367916">+383 44 367 916</a></li>
             <li><a href="mailto:AnesMAlit@gmail.com">AnesMalit@gmail.com</a></li>
-            <li><a
-                href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed">
+            <li><a href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed">
                 Anton Harapi, Nr 58, 10000 Prishtinë,</a></li>
 
           </ul>
