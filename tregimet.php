@@ -92,7 +92,7 @@ if (isset($_GET['lang'])) {
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav">
                         <?php if ($language === "fr"): ?>
-                <li class="nav-item active <?php if ($currentPage === 'index.php')
+                <li class="nav-item <?php if ($currentPage === 'index.php')
                   echo 'active'; ?>"><a class="nav-link" href="index.php">Accueil</a></li>
                 <li class="nav-item <?php if ($currentPage === 'blog.php')
                   echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogue</a></li>
@@ -100,12 +100,12 @@ if (isset($_GET['lang'])) {
                   echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">À propos de nous</a></li>
                 <li class="nav-item <?php if ($currentPage === 'kontakt.php')
                   echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
-                <li class="nav-item <?php if ($currentPage === 'tregimet.php')
+                <li class="nav-item active <?php if ($currentPage === 'tregimet.php')
                   echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Histoires</a></li>
 
 <!--.-->
               <?php elseif ($language === "al"): ?>
-                <li class="nav-item active <?php if ($currentPage === 'index.php')
+                <li class="nav-item  <?php if ($currentPage === 'index.php')
                   echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
                 <li class="nav-item <?php if ($currentPage === 'blog.php')
                   echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogu</a></li>
@@ -113,11 +113,11 @@ if (isset($_GET['lang'])) {
                   echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
                 <li class="nav-item <?php if ($currentPage === 'kontakt.php')
                   echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakti</a></li>
-                <li class="nav-item <?php if ($currentPage === 'tregimet.php')
+                <li class="nav-item active <?php if ($currentPage === 'tregimet.php')
                   echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregime</a></li>
 
               <?php else: ?>
-                <li class="nav-item active <?php if ($currentPage === 'index.php')
+                <li class="nav-item <?php if ($currentPage === 'index.php')
                   echo 'active'; ?>"><a class="nav-link" href="index.php">Home</a></li>
                 <li class="nav-item <?php if ($currentPage === 'blog.php')
                   echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
@@ -125,7 +125,7 @@ if (isset($_GET['lang'])) {
                   echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">About Us</a></li>
                 <li class="nav-item <?php if ($currentPage === 'kontakt.php')
                   echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
-                <li class="nav-item <?php if ($currentPage === 'tregimet.php')
+                <li class="nav-item active <?php if ($currentPage === 'tregimet.php')
                   echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Stories</a></li>
 
               <?php endif; ?>
