@@ -210,18 +210,6 @@
   <script type="text/javascript" src="https://smtpjs.com/v3/smtp.js"></script>
 
   <script type="text/javascript">
-    // PHP duke perdorur variablat globale
-    var emailMessage = '<?php
-                        $subject = "Message from website contact form";
-                        $message = "You have received a message from the website contact form:\n\n";
-                        $message .= "Name: " . $_POST['name'] . "\n";
-                        $message .= "Email: " . $_POST['email'] . "\n";
-                        $message .= "Subject: " . $_POST['subject'] . "\n";
-                        $message .= "Message: " . $_POST['message'] . "\n";
-                        echo addslashes($message);
-                        ?>';
-
-    // JavaScript funksioni per dergim te email-it
     function sendEmail() {
       Email.send({
         Host: "smtp.elasticemail.com",
@@ -244,7 +232,23 @@
     }
   </script>
 
+  <?php
+    function validoEmail($email) {
+        $shprehja = '/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/';
+        if (preg_match($shprehja, $email)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
+    $email = $_POST['email'];
+    if (validoEmail($email)) {
+        echo "Adresa email është valide.";
+    } else {
+        echo "Adresa email nuk është valide.";
+    }
+  ?>
 
   <script src="libs/jquery/jquery-3.2.1.min.js"></script>
   <script src="js/main.js"></script>
