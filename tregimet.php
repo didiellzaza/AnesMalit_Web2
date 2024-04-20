@@ -179,6 +179,7 @@ margin-top:-8px; text-align:left;">
                         shihet nga maja Qafës së Qyqes. Maja e Gurit të Kuq (1522 m) gjithashtu ofron pamje të
                         jashtëzakonshme.
                 </div>
+                <!--.-->
 
 
             </div>

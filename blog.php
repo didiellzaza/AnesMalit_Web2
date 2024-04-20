@@ -110,6 +110,7 @@
                                 <p>Stina e veres</p>
                             </div>
                         </div>
+                        <!--.-->
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-4 mb-4 mb-lg-0">

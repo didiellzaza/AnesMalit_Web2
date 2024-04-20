@@ -116,6 +116,7 @@
       </div>
     </div>
   </section>
+  <!--.-->
 
   <!--Pjesa kryesore Kush jemi ne-->
 
