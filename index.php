@@ -1,3 +1,32 @@
+<?php
+// Start the session
+session_start();
+
+// Default language is English
+$language = "en";
+
+// Check if the preferred language is set in the session
+if (isset($_SESSION["preferred_language"])) {
+  $language = $_SESSION["preferred_language"];
+} elseif (isset($_COOKIE["preferred_language"])) {
+  // If preferred language is not set in session but set in cookie, use cookie value
+  $language = $_COOKIE["preferred_language"];
+}
+
+// Output content based on the selected language
+if ($language === "fr") {
+  // Display text in French
+  echo "<h1>Bienvenue sur notre site!</h1>";
+} elseif ($language === "es") {
+  // Display text in Spanish
+  echo "<h1>¡Bienvenido a nuestro sitio!</h1>";
+} else {
+  // Default: Display text in English
+  echo "<h1>Welcome to our website!</h1>";
+  // Set the preferred language in a cookie for future visits
+  setcookie("preferred_language", $language, time() + (86400 * 30), "/"); // 30 days expiration
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,6 +53,61 @@
       margin: 10px;
       padding: 10px;
       border: none;
+    }
+
+    /*Language part*/
+    .language-selection {
+      margin-top: 20px;
+    }
+
+    .language-selection label {
+      font-size: 18px;
+      font-weight: 500;
+      color: #eebc4c;
+      margin-top: 1rem;
+      margin-right: 0.5rem;
+      margin-left: 0.3rem;
+    }
+
+    .language-selection select {
+      width: 200px;
+      height: 40px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      padding: 5px 10px;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #777777;
+    }
+
+    .language-selection button {
+      background-color: #eebc4c;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-left: 0.5rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .language-selection button:hover {
+      background-color: #cca772;
+    }
+
+    .language-selection form {
+      display: flex;
+      align-items: center;
+    }
+
+    /*h1*/
+    .custom-h1 {
+      font-family: "Playfair Display", serif;
+      color: #222222;
+      font-weight: 700;
+      font-size: 32px;
     }
   </style>
 </head>
@@ -68,6 +152,20 @@
         </div>
       </nav>
     </div>
+
+    <!--Language-->
+    <div class="language-selection">
+      <form action="save_language.php" method="POST">
+        <label for="language">Select Language:</label>
+        <select name="language" id="language">
+          <option value="en">English</option>
+          <option value="fr">French</option>
+          <option value="es">Spanish</option>
+        </select>
+        <button type="submit">Save</button>
+      </form>
+    </div>
+
   </header>
 
   <main class="site-main">

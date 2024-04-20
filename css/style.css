@@ -34,8 +34,10 @@ h6 {
 
 h1,
 .h1 {
-  font-size: 70px;
+  font-size: 15px;
   font-weight: 700;
+  color:#95ce95;
+  
 }
 
 h2,
@@ -670,6 +672,7 @@ button {
   background: #eebc4c;
   height: 50px;
   text-transform: uppercase;
+  margin: auto;
 }
 
 .form-select-custom {
@@ -776,7 +779,7 @@ button {
 
 .button-form {
   border: 1px solid #eebc4c !important;
-  color: #303030;
+  color: #000000;
 }
 
 .button-form:hover {

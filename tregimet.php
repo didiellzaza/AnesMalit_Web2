@@ -63,6 +63,7 @@
             <div class="udhetimetf">
                 <div class="udhetimetfcon">
                     <img src="img/Fotonatyre.jpg" height="184" width="319" alt="Keshille">
+                    <h4 style="text-align:left;">Tregim</h4>
                     <h4 style="text-align:left;"><?php
 
                                                     class Tregim
@@ -202,7 +203,7 @@ margin-top:-8px; text-align:left;">Ujevara e Mirushes</h5>
                     <img src="img/Prizren.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h5 style="
-margin-top:-8px; text-align:left;">Prizereni Naten</h5>
+margin-top:-8px; text-align:left;">Prizreni Naten</h5>
                     <p>
                         Nje vend shum i bukur
                         nje vend me gjelbrime
