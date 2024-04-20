@@ -109,15 +109,6 @@ if (isset($_GET['lang'])) {
         <div class="container">
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav">
-<<<<<<< Updated upstream
-              <?php if ($language === "fr") : ?>
-                <li class="nav-item active <?php if ($currentPage === 'index.php')
-                                              echo 'active'; ?>"><a class="nav-link" href="index.php">Accueil</a></li>
-                <li class="nav-item <?php if ($currentPage === 'blog.php')
-                                      echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogue</a></li>
-                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
-                                      echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">À propos de nous</a></li>
-=======
             <?php if ($language === "fr"): ?>
                 <li class="nav-item <?php if ($currentPage === 'index.php')
                   echo 'active'; ?>"><a class="nav-link" href="index.php">Accueil</a></li>
@@ -125,45 +116,24 @@ if (isset($_GET['lang'])) {
                   echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogue</a></li>
                 <li class="nav-item active <?php if ($currentPage === 'rreth-nesh.php')
                   echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">À propos de nous</a></li>
->>>>>>> Stashed changes
                 <li class="nav-item <?php if ($currentPage === 'kontakt.php')
-                                      echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
+                  echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
                 <li class="nav-item <?php if ($currentPage === 'tregimet.php')
-                                      echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Histoires</a></li>
+                  echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Histoires</a></li>
 
-<<<<<<< Updated upstream
-                <!--.-->
-              <?php elseif ($language === "al") : ?>
-                <li class="nav-item active <?php if ($currentPage === 'index.php')
-                                              echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
-                <li class="nav-item <?php if ($currentPage === 'blog.php')
-                                      echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogu</a></li>
-                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
-                                      echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
-=======
 <!--.-->
               <?php elseif ($language === "al"): ?>
                 <li class="nav-item <?php if ($currentPage === 'index.php')
                   echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
                 <li class="nav-item <?php if ($currentPage === 'blog.php')
                   echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogu</a></li>
-                <li class="nav-item active<?php if ($currentPage === 'rreth-nesh.php')
+                <li class="nav-item active <?php if ($currentPage === 'rreth-nesh.php')
                   echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
->>>>>>> Stashed changes
                 <li class="nav-item <?php if ($currentPage === 'kontakt.php')
-                                      echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakti</a></li>
+                  echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakti</a></li>
                 <li class="nav-item <?php if ($currentPage === 'tregimet.php')
-                                      echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregime</a></li>
+                  echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregime</a></li>
 
-<<<<<<< Updated upstream
-              <?php else : ?>
-                <li class="nav-item active <?php if ($currentPage === 'index.php')
-                                              echo 'active'; ?>"><a class="nav-link" href="index.php">Home</a></li>
-                <li class="nav-item <?php if ($currentPage === 'blog.php')
-                                      echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
-                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
-                                      echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">About Us</a></li>
-=======
               <?php else: ?>
                 <li class="nav-item <?php if ($currentPage === 'index.php')
                   echo 'active'; ?>"><a class="nav-link" href="index.php">Home</a></li>
@@ -171,11 +141,10 @@ if (isset($_GET['lang'])) {
                   echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
                 <li class="nav-item active <?php if ($currentPage === 'rreth-nesh.php')
                   echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">About Us</a></li>
->>>>>>> Stashed changes
                 <li class="nav-item <?php if ($currentPage === 'kontakt.php')
-                                      echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
+                  echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
                 <li class="nav-item <?php if ($currentPage === 'tregimet.php')
-                                      echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Stories</a></li>
+                  echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Stories</a></li>
 
               <?php endif; ?>
             </ul>
@@ -249,7 +218,7 @@ if (isset($_GET['lang'])) {
             <p>Qofshit një entuziast me përvojë i natyrës apo dikush thjesht i etur për të filluar eksplorimin,
               AnesMalit është këtu për të ndihmuar në lidhjen e të gjithëve me gjithçka që kanë për të ofruar trojet
               shqiptare.</p>
-
+            
           </div>
         </div>
       </div>
@@ -360,7 +329,8 @@ if (isset($_GET['lang'])) {
           <ul>
             <li><a href="#">+383 44 367 916</a></li>
             <li><a href="mailto:AnesMAlit@gmail.com">AnesMalit@gmail.com</a></li>
-            <li><a href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed">
+            <li><a
+                href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed">
                 Lakrishte, Prishtine</a></li>
 
           </ul>
