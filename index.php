@@ -96,8 +96,13 @@ if (isset($_GET['lang'])) {
                 <li class="nav-item <?php if ($currentPage === 'tregimet.php')
                                       echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Histoires</a></li>
 
+<<<<<<< HEAD
 
               <?php elseif ($language === "al") : ?>
+=======
+<!--.-->
+              <?php elseif ($language === "al"): ?>
+>>>>>>> a5bda65719205c1593862ea5ccda79c64499a748
                 <li class="nav-item active <?php if ($currentPage === 'index.php')
                                               echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
                 <li class="nav-item <?php if ($currentPage === 'blog.php')

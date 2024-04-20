@@ -170,6 +170,7 @@
       </div>
     </div>
   </section>
+  <!--.-->
 
   <!--Pjesa e Footer-->
   <footer class="footer-area section-gap">

@@ -107,15 +107,16 @@
   </header>
 
   <!--Pjesa e Banner-->
-  <section class="blog-banner-area" id="about">
+  <section class="rrethnesh-banner-area" id="about">
     <div class="container h-100">
-      <div class="blog-banner">
+      <div class="rrethnesh-banner">
         <div class="text-center">
           <h1>Rreth nesh</h1>
         </div>
       </div>
     </div>
   </section>
+  <!--.-->
 
   <!--Pjesa kryesore Kush jemi ne-->
 
