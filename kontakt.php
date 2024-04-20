@@ -232,23 +232,7 @@
     }
   </script>
 
-  <?php
-    function validoEmail($email) {
-        $shprehja = '/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/';
-        if (preg_match($shprehja, $email)) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 
-    $email = $_POST['email'];
-    if (validoEmail($email)) {
-        echo "Adresa email është valide.";
-    } else {
-        echo "Adresa email nuk është valide.";
-    }
-  ?>
 
   <script src="libs/jquery/jquery-3.2.1.min.js"></script>
   <script src="js/main.js"></script>
