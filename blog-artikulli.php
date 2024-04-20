@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="libs/linericon/style.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/langstyle.css">
 </head>
 
 <body>
@@ -26,6 +27,18 @@
                         <a href="index.html"><img src="img/logo1.png" style="height: 50px;" /></a>
                     </div>
                     <div class="ml-auto d-none d-md-block d-md-flex"></div>
+                    <!--Language-->
+                    <div class="language-selection">
+                        <form action="save_language.php" method="POST">
+                            <label for="language">Zgjedh gjuhën:</label>
+                            <select name="language" id="language">
+                                <option value="al">Shqip</option>
+                                <option value="en">English</option>
+                                <option value="fr">Français</option>
+                            </select>
+                            <button type="submit">Ruaj</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -35,11 +48,21 @@
                 <div class="container">
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav">
-                            <li class="nav-item <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
-                            <li class="nav-item active <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
-                            <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
-                            <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakt</a></li>
-                            <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregimet</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'index.php')
+                                echo 'active'; ?>"><a
+                                    class="nav-link" href="index.php">Ballina</a></li>
+                            <li class="nav-item active <?php if ($currentPage === 'blog.php')
+                                echo 'active'; ?>"><a
+                                    class="nav-link" href="blog.php">Blog</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
+                                echo 'active'; ?>"><a
+                                    class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'kontakt.php')
+                                echo 'active'; ?>"><a
+                                    class="nav-link" href="kontakt.php">Kontakt</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'tregimet.php')
+                                echo 'active'; ?>"><a
+                                    class="nav-link" href="tregimet.php">Tregimet</a></li>
                         </ul>
                     </div>
 
@@ -99,13 +122,16 @@
                         <div class="col-lg-9 col-md-9 blog_details">
                             <h2>Kampi Internacional, Rugove 2022</h2>
                             <p class="excert">
-                                Aktivitetet qe organizojme ne kane nje qellim te vetem, te kenaqemi se bashku ne pranine e njeri-tjetrit dhe te natyres.<br>
+                                Aktivitetet qe organizojme ne kane nje qellim te vetem, te kenaqemi se bashku ne pranine
+                                e njeri-tjetrit dhe te natyres.<br>
                                 <br>
-                                Kujtimet e kampit ne Rugove jane pasqyra me e mire e perjetimeve te paharruara qe mundet te pasurohet secili prej nesh,
+                                Kujtimet e kampit ne Rugove jane pasqyra me e mire e perjetimeve te paharruara qe mundet
+                                te pasurohet secili prej nesh,
                                 ne mengjeset e qeta, dite produktive dhe mbremjeve te embla ne qiellin e hapur.
                             </p>
                             <p>
-                                Nese e keni humbur kete aventure, do kemi edhe shume befasi te tjera per ju. Vetem ejani bashke me ne!
+                                Nese e keni humbur kete aventure, do kemi edhe shume befasi te tjera per ju. Vetem ejani
+                                bashke me ne!
                             </p>
 
                         </div>
@@ -122,9 +148,12 @@
                                 </div>
                                 <div class="col-lg-12 mt-4">
                                     <p>
-                                        Liqenati nje eksperience e mbushur me ndjenjat me te shumellojshme ne aspektin e mire dhe zbavites.<br>
-                                        E shijuam freskine e tij me not. Ndersa, Andrra si gjithmone gjeti rehatine e saj ne tente.<br><br>
-                                        Nje shoqeri e re, entuziaste dhe rinore eshte merita me e mire e kesaj pune per ne.
+                                        Liqenati nje eksperience e mbushur me ndjenjat me te shumellojshme ne aspektin e
+                                        mire dhe zbavites.<br>
+                                        E shijuam freskine e tij me not. Ndersa, Andrra si gjithmone gjeti rehatine e
+                                        saj ne tente.<br><br>
+                                        Nje shoqeri e re, entuziaste dhe rinore eshte merita me e mire e kesaj pune per
+                                        ne.
                                     </p>
                                 </div>
                             </div>
@@ -228,11 +257,15 @@
                         <form>
                             <div class="form-group">
                                 <div class="form-group col-lg-6 col-md-6 name">
-                                    <input type="text" class="form-control" id="name" placeholder="Emri" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Emri'" style="padding: left 0px;">
+                                    <input type="text" class="form-control" id="name" placeholder="Emri"
+                                        onfocus="this.placeholder = ''" onblur="this.placeholder = 'Emri'"
+                                        style="padding: left 0px;">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control mb-10" rows="5" name="message" placeholder="Mesazhi" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Shkruaj mesazhin'" required=""></textarea>
+                                <textarea class="form-control mb-10" rows="5" name="message" placeholder="Mesazhi"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Shkruaj mesazhin'"
+                                    required=""></textarea>
                             </div>
                             <a href="#" class="button button-postComment button--active">Posto Komentin</a>
                         </form>
@@ -361,7 +394,9 @@
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="E-mail adresa juaj" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
+                                    <input type="text" class="form-control" id="inlineFormInputGroup"
+                                        placeholder="E-mail adresa juaj" onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Enter email'">
                                 </div>
                                 <a href="#" class="bbtns">Abonohu</a>
                             </div>
@@ -400,7 +435,8 @@
                     <ul>
                         <li><a href="tel:44367916">+383 44 367 916</a></li>
                         <li><a href="mailto:AnesMAlit@gmail.com">AnesMalit@gmail.com</a></li>
-                        <li><a href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed">
+                        <li><a
+                                href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed">
                                 Anton Harapi, Nr 58, 10000 Prishtinë,</a></li>
 
                     </ul>
@@ -413,7 +449,8 @@
                 <p class="footer-text m-0 col-lg-8 col-md-12">Copyright &copy; All rights reserved | FIEK</p>
                 <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
                     <a href="https://www.facebook.com/diellza.raqi.5"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/in/festina-mjeku-02754722a/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/festina-mjeku-02754722a/"><i
+                            class="fab fa-linkedin-in"></i></a>
                     <a href="https://www.instagram.com/festina.mjeku/"><i class="fab fa-instagram"></i></a>
                     <a href="https://twitter.com/AnesMalit"><i class="fab fa-twitter"></i></a>
                 </div>

@@ -13,9 +13,14 @@
     <link rel="stylesheet" href="libs/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="libs/linericon/style.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/langstyle.css">
 
-
-
+    <style>
+    *{
+        font-family: "Roboto", sans-serif;
+        
+    }
+        </style>
 </head>
 
 <body>
@@ -28,7 +33,18 @@
                         <a href="index.html"><img src="img/logo1.png" style="height: 50px;" /></a>
                     </div>
                     <div class="ml-auto d-none d-md-block d-md-flex">
-                        <!-- Navigation menu -->
+                        <!--Language-->
+                        <div class="language-selection">
+                            <form action="save_language.php" method="POST">
+                                <label for="language">Zgjedh gjuhën:</label>
+                                <select name="language" id="language">
+                                    <option value="al">Shqip</option>
+                                    <option value="en">English</option>
+                                    <option value="fr">Français</option>
+                                </select>
+                                <button type="submit">Ruaj</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -39,11 +55,21 @@
                 <div class="container">
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav">
-                            <li class="nav-item <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
-                            <li class="nav-item <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
-                            <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
-                            <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakt</a></li>
-                            <li class="nav-item active <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregimet</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'index.php')
+                                echo 'active'; ?>"><a
+                                    class="nav-link" href="index.php">Ballina</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'blog.php')
+                                echo 'active'; ?>"><a
+                                    class="nav-link" href="blog.php">Blog</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
+                                echo 'active'; ?>"><a
+                                    class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'kontakt.php')
+                                echo 'active'; ?>"><a
+                                    class="nav-link" href="kontakt.php">Kontakt</a></li>
+                            <li class="nav-item active <?php if ($currentPage === 'tregimet.php')
+                                echo 'active'; ?>"><a
+                                    class="nav-link" href="tregimet.php">Tregimet</a></li>
                         </ul>
                     </div>
 
@@ -59,30 +85,32 @@
 
     <!-- Tregimet content -->
     <div class="header1">
-        <div class="coheader">
+        
             <div class="udhetimetf">
                 <div class="udhetimetfcon">
                     <img src="img/Fotonatyre.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h4 style="text-align:left;"><?php
 
-                                                    class Tregim
-                                                    {
-                                                        public $titull;
-                                                        function Tregim()
-                                                        {
-                                                            $this->titull = "TREGIM";
-                                                        }
-                                                    }
+                    class Tregim
+                    {
+                        public $titull;
+                        function Tregim()
+                        {
+                            $this->titull = "TREGIM";
+                        }
+                    }
 
-                                                    $objekti = new Tregim();
+                    $objekti = new Tregim();
 
 
-                                                    echo $objekti->titull;
-                                                    ?></h4>
+                    echo $objekti->titull;
+                    ?></h4>
                     <h5 style="margin-top:-8px; text-align:left;">Ne malet e bogës</h5>
                     <p>
-                        Sipas gojëdhënave Boga ishte emri i djalit të dytë të Kelmecës (të parit të Kelmendit…). Nga djali i dytë rrodhi fisi i vogël i Bogës, i cili bënte pjesë në Fisin e Kelmendasve. Deri në shekullin e XVII ky fshat ka qenë pjesë e Kelmendit, duke qenë një ndër katër bajraqet e tij.
+                        Sipas gojëdhënave Boga ishte emri i djalit të dytë të Kelmecës (të parit të Kelmendit…). Nga
+                        djali i dytë rrodhi fisi i vogël i Bogës, i cili bënte pjesë në Fisin e Kelmendasve. Deri në
+                        shekullin e XVII ky fshat ka qenë pjesë e Kelmendit, duke qenë një ndër katër bajraqet e tij.
                     </p>
                 </div>
                 <div class="udhetimetfcon">
@@ -94,11 +122,15 @@ margin-top:-8px; text-align:left;">
 
                         define("TREGIM", "Lybeteni ne Verë");
                         echo TREGIM;
-                        ?> </h5>
+                        ?>
+                    </h5>
                     <p>
-                        Me rastin e përvjetorit të pavarësisë së Kosovës ShBA Prishtina organizon pushtimin e Majes se Lybetenit te Dielen me 14 Shkurt 2016.
+                        Me rastin e përvjetorit të pavarësisë së Kosovës ShBA Prishtina organizon pushtimin e Majes se
+                        Lybetenit te Dielen me 14 Shkurt 2016.
 
-                        Do te jetë ngjitje alpine ne kushte dimri ku janë të domosdoshme pajisjet dimerore bjeshkatare e sidomos kthetrat, veshmbathje adekuate, syze, shkoponjte, doreza etj. Poashtu kërkohet pergatitje e mire fizike.
+                        Do te jetë ngjitje alpine ne kushte dimri ku janë të domosdoshme pajisjet dimerore bjeshkatare e
+                        sidomos kthetrat, veshmbathje adekuate, syze, shkoponjte, doreza etj. Poashtu kërkohet
+                        pergatitje e mire fizike.
 
                     </p>
 
@@ -128,7 +160,10 @@ margin-top:-8px; text-align:left;">
                         ?>
                     </h5>
                     <p>
-                        Në Rugovë ka shumë shpella, ujëvara, liqene glaciale, maja të larta dhe tunele . Maja më e lartë është Hajla (2403 m), pastaj është Volujaku i cili është pothuajse aq i lartë. Peja mund të shihet nga maja Qafës së Qyqes. Maja e Gurit të Kuq (1522 m) gjithashtu ofron pamje të jashtëzakonshme.
+                        Në Rugovë ka shumë shpella, ujëvara, liqene glaciale, maja të larta dhe tunele . Maja më e lartë
+                        është Hajla (2403 m), pastaj është Volujaku i cili është pothuajse aq i lartë. Peja mund të
+                        shihet nga maja Qafës së Qyqes. Maja e Gurit të Kuq (1522 m) gjithashtu ofron pamje të
+                        jashtëzakonshme.
                 </div>
 
 
@@ -169,9 +204,13 @@ margin-top:-8px; text-align:left;">
 
                         echo $klasa->antariPare;
 
-                        ?></h5>
+                        ?>
+                    </h5>
                     <p>
-                        Udhëtarët që duan shtigje të largëta, të thepisura dhe mikpritje ky vend ballkanik është më i shkëlqyeri për të kaluar disa ditë plot aventurë.Nje thenje qe e ka thene gazeta angleze “Mos u mashtroni nga emri që kanë këto male, sepse kur të arrini në majën e tyre do të ndiheni të bekuar”
+                        Udhëtarët që duan shtigje të largëta, të thepisura dhe mikpritje ky vend ballkanik është më i
+                        shkëlqyeri për të kaluar disa ditë plot aventurë.Nje thenje qe e ka thene gazeta angleze “Mos u
+                        mashtroni nga emri që kanë këto male, sepse kur të arrini në majën e tyre do të ndiheni të
+                        bekuar”
                 </div>
 
                 <div class="udhetimetfcon">
@@ -180,7 +219,9 @@ margin-top:-8px; text-align:left;">
                     <h5 style="
 margin-top:-8px; text-align:left;">Shpella e Gadimes</h5>
                     <p>
-                        Për ta vizituar brendësinë e saj të duhen vetëm pak minuta, mirëpo për të dëgjuar ciceronin dhe për të parë nga afër çdo stalaktit dhe stalagmit, kjo të merrte kohë më shumë.Pikat e ujit rridhnin mbi kokat e vizitorëve, e kjo nga ciceronët shpjegohej si ‘fatsjellës’.
+                        Për ta vizituar brendësinë e saj të duhen vetëm pak minuta, mirëpo për të dëgjuar ciceronin dhe
+                        për të parë nga afër çdo stalaktit dhe stalagmit, kjo të merrte kohë më shumë.Pikat e ujit
+                        rridhnin mbi kokat e vizitorëve, e kjo nga ciceronët shpjegohej si ‘fatsjellës’.
                 </div>
                 <div class="udhetimetfcon">
                     <img src="img/ujevara.jpg" height="184" width="319" alt="Keshille">
@@ -188,9 +229,11 @@ margin-top:-8px; text-align:left;">Shpella e Gadimes</h5>
                     <h5 style="
 margin-top:-8px; text-align:left;">Ujevara e Mirushes</h5>
                     <p>
-                        Temperaturat e ulëta deri në -20 C të cilat kanë mbizotëruar në vendin tonë ditëve të fundit kanë bërë që Ujëvara e Mirushes të ngrihet e tëra, njofton indeksonline.
+                        Temperaturat e ulëta deri në -20 C të cilat kanë mbizotëruar në vendin tonë ditëve të fundit
+                        kanë bërë që Ujëvara e Mirushes të ngrihet e tëra, njofton indeksonline.
 
-                        Nuk mbahet mend nëse ndonjëherë të jetë ngrirë në këtë mënyrë njëra ndër bukuritë e rralla natyrore të Kosovës.</p>
+                        Nuk mbahet mend nëse ndonjëherë të jetë ngrirë në këtë mënyrë njëra ndër bukuritë e rralla
+                        natyrore të Kosovës.</p>
 
                 </div>
 
@@ -222,32 +265,34 @@ margin-top:-8px; text-align:left;">Prizreni Naten</h5>
                     <h5 style="
 margin-top:-8px; text-align:left;"><?php
 
-                                    class klasa1
-                                    {
-                                        public function printo($string)
-                                        {
-                                            echo 'Ne ' . $string . PHP_EOL;
-                                        }
-                                    }
+class klasa1
+{
+    public function printo($string)
+    {
+        echo 'Ne ' . $string . PHP_EOL;
+    }
+}
 
-                                    class klasa2 extends klasa1
-                                    {
-                                        public function printo($string)
-                                        {
-                                            echo 'e ' . $string . PHP_EOL;
-                                        }
-                                    }
+class klasa2 extends klasa1
+{
+    public function printo($string)
+    {
+        echo 'e ' . $string . PHP_EOL;
+    }
+}
 
-                                    $obj1 = new klasa1();
-                                    $obj2 = new klasa2();
-                                    $obj1->printo('malet ');
+$obj1 = new klasa1();
+$obj2 = new klasa2();
+$obj1->printo('malet ');
 
-                                    $obj2->printo('Boges');
+$obj2->printo('Boges');
 
 
-                                    ?></h5>
+?></h5>
                     <p>
-                        Nesi keni vendosur që të shkoni për pushime në mal, për skijim gjatë dimrit, apo për të thithur ajrin e pastër të Rugovës, atje do të gjeni vednin te quajtur Boge i cili do të jetë shtëpia juaj e dytë.
+                        Nesi keni vendosur që të shkoni për pushime në mal, për skijim gjatë dimrit, apo për të thithur
+                        ajrin e pastër të Rugovës, atje do të gjeni vednin te quajtur Boge i cili do të jetë shtëpia
+                        juaj e dytë.
 
                     </p>
                 </div>
@@ -274,7 +319,7 @@ margin-top:-8px; text-align:left;">Mbremje ne natyre</h5>
 
 
 
-            </div>
+            
         </div>
 
         <!-- Footer -->
@@ -304,7 +349,9 @@ margin-top:-8px; text-align:left;">Mbremje ne natyre</h5>
                         <ul>
                             <li><a href="#">+383 44 367 916</a></li>
                             <li><a href="mailto:AnesMAlit@gmail.com">AnesMalit@gmail.com</a></li>
-                            <li><a href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed"> Lakrishte, Prishtine</a></li>
+                            <li><a
+                                    href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed">
+                                    Lakrishte, Prishtine</a></li>
 
                         </ul>
                     </div>
@@ -316,7 +363,8 @@ margin-top:-8px; text-align:left;">Mbremje ne natyre</h5>
                     <p class="footer-text m-0 col-lg-8 col-md-12">Copyright &copy; All rights reserved | FIEK</p>
                     <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
                         <a href="https://www.facebook.com/diellza.raqi.5"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.linkedin.com/in/festina-mjeku-02754722a/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.linkedin.com/in/festina-mjeku-02754722a/"><i
+                                class="fab fa-linkedin-in"></i></a>
                         <a href="https://www.instagram.com/festina.mjeku/"><i class="fab fa-instagram"></i></a>
                         <a href="https://twitter.com/AnesMalit"><i class="fab fa-twitter"></i></a>
                     </div>

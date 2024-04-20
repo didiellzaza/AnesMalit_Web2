@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="libs/themify-icons/themify-icons.css">
   <link rel="stylesheet" href="libs/linericon/style.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/langstyle.css">
 
 </head>
 
@@ -26,6 +27,18 @@
             <a href="index.html"><img src="img/logo1.png" style="height: 50px"></a>
           </div>
           <div class="ml-auto d-none d-md-block d-md-flex">
+            <!--Language-->
+            <div class="language-selection">
+              <form action="save_language.php" method="POST">
+                <label for="language">Zgjedh gjuhën:</label>
+                <select name="language" id="language">
+                  <option value="al">Shqip</option>
+                  <option value="en">English</option>
+                  <option value="fr">Français</option>
+                </select>
+                <button type="submit">Ruaj</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

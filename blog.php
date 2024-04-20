@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="libs/linericon/style.css">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/langstyle.css">
 
 </head>
 
@@ -27,7 +28,18 @@
                         <a href="index.html"><img src="img/logo1.png" alt="" title="" style="height: 50px;" /></a>
                     </div>
                     <div class="ml-auto d-none d-md-block d-md-flex">
-
+                        <!--Language-->
+                        <div class="language-selection">
+                            <form action="save_language.php" method="POST">
+                                <label for="language">Zgjedh gjuhën:</label>
+                                <select name="language" id="language">
+                                    <option value="al">Shqip</option>
+                                    <option value="en">English</option>
+                                    <option value="fr">Français</option>
+                                </select>
+                                <button type="submit">Ruaj</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -39,11 +51,21 @@
                 <div class="container">
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav">
-                            <li class="nav-item <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
-                            <li class="nav-item active <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
-                            <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
-                            <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakt</a></li>
-                            <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregimet</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'index.php')
+                                echo 'active'; ?>"><a
+                                    class="nav-link" href="index.php">Ballina</a></li>
+                            <li class="nav-item active <?php if ($currentPage === 'blog.php')
+                                echo 'active'; ?>"><a
+                                    class="nav-link" href="blog.php">Blog</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
+                                echo 'active'; ?>"><a
+                                    class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'kontakt.php')
+                                echo 'active'; ?>"><a
+                                    class="nav-link" href="kontakt.php">Kontakt</a></li>
+                            <li class="nav-item <?php if ($currentPage === 'tregimet.php')
+                                echo 'active'; ?>"><a
+                                    class="nav-link" href="tregimet.php">Tregimet</a></li>
                             </li>
                         </ul>
                     </div>
@@ -170,8 +192,8 @@
                                         </a>
                                         <p>Kete Gusht organizuam Kampin Internacional
                                             ne Rugove, me pjesetare nga mbare Evropa.</p>
-                                        <a class="button button-blog" href="blog-artikulli.php">Shiko artikullin e
-                                            plote</a>
+                                            <a class="button button-blog" href="blog-artikulli.php" style="border-radius: 0; width:210px; height: 40px; justify-content-center; align-items-center;">Shiko artikullin e plote</a>
+
                                     </div>
                                 </div>
                             </div>
@@ -218,7 +240,8 @@
                                         </a>
                                         <p>Gjate punetorise Yoga, u befasuam me pjesemarresit nga thuajse te gjitha
                                             kategorite e moshave.</p>
-                                        <a href="blog-artikulli.php" class="button button-blog">Shiko artikullin e plote</a>
+                                        <a class="button button-blog" href="blog-artikulli.php" style="border-radius: 0; width:205px; height: 40px; justify-content-center; align-items-center;">Shiko artikullin e
+                                            plote</a>
                                     </div>
                                 </div>
                             </div>
@@ -264,7 +287,8 @@
                                             <h2>A ka me mire se me e nise veren me hiking ne Brod?</h2>
                                         </a>
                                         <p>22 Qershorin e kaluam duke ecur maleve te Brodit.</p>
-                                        <a href="blog-artikulli.php" class="button button-blog">Shiko artikullin e plote</a>
+                                        <a class="button button-blog" href="blog-artikulli.php" style="border-radius: 0; width:210px; height: 40px; justify-content-center; align-items-center;">Shiko artikullin e
+                                            plote</a>
                                     </div>
                                 </div>
                             </div>
@@ -334,7 +358,7 @@
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
-                            <p>Casual fan of touching grass :)
+                            <p>Fan of touching grass :)
                             </p>
                             <div class="br"></div>
                         </aside>
@@ -383,7 +407,9 @@
                                             <i class="fa fa-envelope" aria-hidden="true"></i>
                                         </div>
                                     </div>
-                                    <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="E-mail adresa juaj" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'">
+                                    <input type="text" class="form-control" id="inlineFormInputGroup"
+                                        placeholder="E-mail adresa juaj" onfocus="this.placeholder = ''"
+                                        onblur="this.placeholder = 'Enter email'">
                                 </div>
                                 <a href="#" class="bbtns">Abonohu</a>
                             </div>
@@ -423,7 +449,8 @@
                     <ul>
                         <li><a href="tel:44367916">+383 44 367 916</a></li>
                         <li><a href="mailto:AnesMAlit@gmail.com">AnesMalit@gmail.com</a></li>
-                        <li><a href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed">
+                        <li><a
+                                href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed">
                                 Anton Harapi, Nr 58, 10000 Prishtinë,</a></li>
 
                     </ul>
@@ -436,7 +463,8 @@
                 <p class="footer-text m-0 col-lg-8 col-md-12">Copyright &copy; All rights reserved | FIEK</p>
                 <div class="col-lg-4 col-md-12 text-center text-lg-right footer-social">
                     <a href="https://www.facebook.com/diellza.raqi.5"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.linkedin.com/in/festina-mjeku-02754722a/"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.linkedin.com/in/festina-mjeku-02754722a/"><i
+                            class="fab fa-linkedin-in"></i></a>
                     <a href="https://www.instagram.com/festina.mjeku/"><i class="fab fa-instagram"></i></a>
                     <a href="https://twitter.com/AnesMalit"><i class="fab fa-twitter"></i></a>
                 </div>

@@ -48,73 +48,7 @@ if (isset($_GET['lang'])) {
   <link rel="stylesheet" href="libs/linericon/style.css">
 
   <link rel="stylesheet" href="css/style.css">
-
-  <style>
-    #div1,
-    #div2 {
-      float: left;
-      width: 100px;
-      height: 35px;
-      margin: 10px;
-      padding: 10px;
-      border: none;
-    }
-
-    /*Language part*/
-    .language-selection {
-      margin-top: 20px;
-    }
-
-    .language-selection label {
-      font-size: 18px;
-      font-weight: 500;
-      color: #eebc4c;
-      margin-top: 1rem;
-      margin-right: 0.5rem;
-      margin-left: 0.3rem;
-    }
-
-    .language-selection select {
-      width: 200px;
-      height: 40px;
-      border: 1px solid #cccccc;
-      border-radius: 5px;
-      padding: 5px 10px;
-      margin-top: 10px;
-      font-size: 16px;
-      color: #777777;
-    }
-
-    .language-selection button {
-      background-color: #eebc4c;
-      color: #ffffff;
-      border: none;
-      border-radius: 5px;
-      padding: 10px 20px;
-      margin-top: 10px;
-      cursor: pointer;
-      font-size: 16px;
-      margin-left: 0.5rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .language-selection button:hover {
-      background-color: #cca772;
-    }
-
-    .language-selection form {
-      display: flex;
-      align-items: center;
-    }
-
-    /*h1*/
-    .custom-h1 {
-      font-family: "Playfair Display", serif;
-      color: #222222;
-      font-weight: 700;
-      font-size: 32px;
-    }
-  </style>
+  <link rel="stylesheet" href="css/langstyle.css">
 </head>
 
 <body>
@@ -127,7 +61,18 @@ if (isset($_GET['lang'])) {
             <a href="index.html"><img src="img/logo1.png" style="height: 50px;" /></a>
           </div>
           <div class="ml-auto d-none d-md-block d-md-flex">
-
+            <!--Language-->
+            <div class="language-selection">
+              <form action="save_language.php" method="POST">
+                <label for="language">Zgjedh gjuhën:</label>
+                <select name="language" id="language">
+                  <option value="al">Shqip</option>
+                  <option value="en">English</option>
+                  <option value="fr">Français</option>
+                </select>
+                <button type="submit">Ruaj</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -139,24 +84,43 @@ if (isset($_GET['lang'])) {
         <div class="container">
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav">
-              <?php if ($language === "fr") : ?>
-                <li class="nav-item active <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Accueil</a></li>
-                <li class="nav-item <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogue</a></li>
-                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">À propos de nous</a></li>
-                <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
-                <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Histoires</a></li>
-              <?php elseif ($language === "al") : ?>
-                <li class="nav-item active <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
-                <li class="nav-item <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogu</a></li>
-                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
-                <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakti</a></li>
-                <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregime</a></li>
-              <?php else : ?>
-                <li class="nav-item active <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Home</a></li>
-                <li class="nav-item <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
-                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">About Us</a></li>
-                <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
-                <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Stories</a></li>
+              <?php if ($language === "fr"): ?>
+                <li class="nav-item active <?php if ($currentPage === 'index.php')
+                  echo 'active'; ?>"><a class="nav-link" href="index.php">Accueil</a></li>
+                <li class="nav-item <?php if ($currentPage === 'blog.php')
+                  echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogue</a></li>
+                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
+                  echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">À propos de nous</a></li>
+                <li class="nav-item <?php if ($currentPage === 'kontakt.php')
+                  echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
+                <li class="nav-item <?php if ($currentPage === 'tregimet.php')
+                  echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Histoires</a></li>
+
+
+              <?php elseif ($language === "al"): ?>
+                <li class="nav-item active <?php if ($currentPage === 'index.php')
+                  echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
+                <li class="nav-item <?php if ($currentPage === 'blog.php')
+                  echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogu</a></li>
+                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
+                  echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
+                <li class="nav-item <?php if ($currentPage === 'kontakt.php')
+                  echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakti</a></li>
+                <li class="nav-item <?php if ($currentPage === 'tregimet.php')
+                  echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregime</a></li>
+
+              <?php else: ?>
+                <li class="nav-item active <?php if ($currentPage === 'index.php')
+                  echo 'active'; ?>"><a class="nav-link" href="index.php">Home</a></li>
+                <li class="nav-item <?php if ($currentPage === 'blog.php')
+                  echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
+                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
+                  echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">About Us</a></li>
+                <li class="nav-item <?php if ($currentPage === 'kontakt.php')
+                  echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
+                <li class="nav-item <?php if ($currentPage === 'tregimet.php')
+                  echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Stories</a></li>
+
               <?php endif; ?>
             </ul>
           </div>
@@ -170,28 +134,11 @@ if (isset($_GET['lang'])) {
       </nav>
     </div>
 
-    <ul class="social-icons ml-auto">
-      <li><a href="https://www.facebook.com/diellza.raqi.5"><i class="fab fa-facebook-f"></i></a></li>
-      <li><a href="https://www.instagram.com/festina.mjeku/"><i class="fab fa-instagram"></i></a></li>
-      <li><a href="https://twitter.com/AnesMalit"><i class="fab fa-twitter"></i></a></li>
-    </ul>
     </div>
     </nav>
     </div>
 
-    <!--Language-->
-    <div class="language-selection">
-      <form action="save_language.php" method="POST">
-        <label for="language">Zgjedh gjuhën:</label>
-        <select name="language" id="language">
-          <option value="al">Shqip</option>
-          <option value="en">English</option>
-          <option value="fr">Français</option>
 
-        </select>
-        <button type="submit">Ruaj</button>
-      </form>
-    </div>
 
   </header>
 
@@ -299,9 +246,10 @@ if (isset($_GET['lang'])) {
         </div>
         <div class="col-lg-4 gutters-19">
           <div class="form-group">
-            <button class="button button-form" type="submit">KËRKO</button>
+            <button class="button button-form" type="submit" style="border-radius: 0; width: 290px;">KËRKO</button>
           </div>
         </div>
+
       </div>
     </div>
   </form>
@@ -321,8 +269,8 @@ if (isset($_GET['lang'])) {
                 "img/Dimri.jpg"
               ];
 
-              foreach ($sliderImages as $index => $image) :
-              ?>
+              foreach ($sliderImages as $index => $image):
+                ?>
                 <div class="carousel-item <?= $index === 0 ? 'active' : '' ?>">
                   <img src="<?= $image ?>" class="d-block w-100" alt="Slider Image <?= $index ?>">
                 </div>
@@ -341,8 +289,10 @@ if (isset($_GET['lang'])) {
         <div class="col-lg-7">
           <div class="welcome-content">
             <h2 class="mb-4"><span class="d-block">Mirë se vini</span> drejt eksplorimit</h2>
-            <p>Nëse jeni një adhurues i natyrës të çfardo lloj bukurie të ashpër dhe të butë që ajo mundet të ketë dhe po kërkoni një pikënisje drejt kësaj sfide të re, atëhere gjendeni në vendin e duhur. </p>
-            <p>Asnjëherë nuk është vonë dhe asnjëherë nuk është herët. Eja të shohësh se si ecim aty ku dielli ngroh lulet, e ujerat malet dhe fushat këndojn. </p>
+            <p>Nëse jeni një adhurues i natyrës të çfardo lloj bukurie të ashpër dhe të butë që ajo mundet të ketë dhe
+              po kërkoni një pikënisje drejt kësaj sfide të re, atëhere gjendeni në vendin e duhur. </p>
+            <p>Asnjëherë nuk është vonë dhe asnjëherë nuk është herët. Eja të shohësh se si ecim aty ku dielli ngroh
+              lulet, e ujerat malet dhe fushat këndojn. </p>
             <a class="button button--active home-banner-btn mt-4" href="#">Më shumë</a>
           </div>
         </div>
@@ -376,7 +326,8 @@ if (isset($_GET['lang'])) {
               <div class="card-body">
                 <h3 class="card-explore__price">50€ <sub>/ 4 ditë</sub></h3>
                 <h4 class="card-explore__title"><a href="blog.html">Kampingu në male</a></h4>
-                <p>Mos u shqetëso për paisjet që të duhen apo transportin. Krejt cka te duhet është me u ba pjesë e grupit
+                <p>Mos u shqetëso për paisjet që të duhen apo transportin. Krejt cka te duhet është me u ba pjesë e
+                  grupit
                   tonë. </p>
                 <a class="card-explore__link" href="blog.html">Më shumë <i class="ti-arrow-right"></i></a>
               </div>
@@ -391,7 +342,8 @@ if (isset($_GET['lang'])) {
               <div class="card-body">
                 <h3 class="card-explore__price">20€ <sub>/ Një ditë</sub></h3>
                 <h4 class="card-explore__title"><a href="blog.html">Skijimi</a></h4>
-                <p>Mos u shqetëso për paisjet që të duhen apo transportin. Krejt cka te duhet është me u ba pjesë e grupit
+                <p>Mos u shqetëso për paisjet që të duhen apo transportin. Krejt cka te duhet është me u ba pjesë e
+                  grupit
                   tonë. </p>
                 <a class="card-explore__link" href="blog.html">Më shumë <i class="ti-arrow-right"></i></a>
               </div>
@@ -406,7 +358,8 @@ if (isset($_GET['lang'])) {
               <div class="card-body">
                 <h3 class="card-explore__price">10€ <sub>/ Një ditë</sub></h3>
                 <h4 class="card-explore__title"><a href="blog.html">Ciklizmi</a></h4>
-                <p>Mos u shqetëso për paisjet që të duhen apo transportin. Krejt cka te duhet është me u ba pjesë e grupit
+                <p>Mos u shqetëso për paisjet që të duhen apo transportin. Krejt cka te duhet është me u ba pjesë e
+                  grupit
                   tonë. </p>
                 <a class="card-explore__link" href="blog.html">Më shumë <i class="ti-arrow-right"></i></a>
               </div>
@@ -514,7 +467,8 @@ if (isset($_GET['lang'])) {
           <ul>
             <li><a href="tel:44367916">+383 44 367 916</a></li>
             <li><a href="mailto:AnesMAlit@gmail.com">AnesMalit@gmail.com</a></li>
-            <li><a href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed">
+            <li><a
+                href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed">
                 Anton Harapi, Nr 58, 10000 Prishtinë,</a></li>
 
           </ul>

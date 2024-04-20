@@ -883,6 +883,7 @@ button {
 
 .welcome {
   padding-top: 40px;
+  padding-bottom:40px;
 }
 
 .welcome-images .card {
@@ -1030,7 +1031,7 @@ button {
 }
 
 .testimonial-col {
-  flex-basis: 44%;
+  flex-basis: 30%;
   border-radius: 10px;
   margin-bottom: 5%;
   text-align: left;

@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="libs/linericon/style.css">
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/langstyle.css">
 
   <style>
     .video {
@@ -51,6 +52,18 @@
             <a href="index.html"><img src="img/logo1.png" style="height: 50px;" /></a>
           </div>
           <div class="ml-auto d-none d-md-block d-md-flex">
+            <!--Language-->
+            <div class="language-selection">
+              <form action="save_language.php" method="POST">
+                <label for="language">Zgjedh gjuhën:</label>
+                <select name="language" id="language">
+                  <option value="al">Shqip</option>
+                  <option value="en">English</option>
+                  <option value="fr">Français</option>
+                </select>
+                <button type="submit">Ruaj</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -62,11 +75,21 @@
         <div class="container">
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav">
-              <li class="nav-item <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
-              <li class="nav-item <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
-              <li class="nav-item active <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
-              <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakt</a></li>
-              <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregimet</a></li>
+              <li class="nav-item <?php if ($currentPage === 'index.php')
+                echo 'active'; ?>"><a class="nav-link"
+                  href="index.php">Ballina</a></li>
+              <li class="nav-item <?php if ($currentPage === 'blog.php')
+                echo 'active'; ?>"><a class="nav-link"
+                  href="blog.php">Blog</a></li>
+              <li class="nav-item active <?php if ($currentPage === 'rreth-nesh.php')
+                echo 'active'; ?>"><a
+                  class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
+              <li class="nav-item <?php if ($currentPage === 'kontakt.php')
+                echo 'active'; ?>"><a class="nav-link"
+                  href="kontakt.php">Kontakt</a></li>
+              <li class="nav-item <?php if ($currentPage === 'tregimet.php')
+                echo 'active'; ?>"><a class="nav-link"
+                  href="tregimet.php">Tregimet</a></li>
               </li>
             </ul>
           </div>
@@ -133,9 +156,12 @@
         <div class="col-lg-7">
           <div class="welcome-content">
             <h2 class="mb-4"><span class="d-block">Kush jemi ne?</span></h2>
-            <p>AnesMalit është një OJQ e përkushtuar për promovimin e Kosovës dhe Shqipërisë si destinacione për ecje dhe ekoturizëm për vizitorët ndërkombëtarë dhe vendasit.</p>
-            <p>Qofshit një entuziast me përvojë i natyrës apo dikush thjesht i etur për të filluar eksplorimin, AnesMalit është këtu për të ndihmuar në lidhjen e të gjithëve me gjithçka që kanë për të ofruar trojet shqiptare.</p>
-            <a class="button button--active home-banner-btn mt-4" href="blog.html">Më shumë</a>
+            <p>AnesMalit është një OJQ e përkushtuar për promovimin e Kosovës dhe Shqipërisë si destinacione për ecje
+              dhe ekoturizëm për vizitorët ndërkombëtarë dhe vendasit.</p>
+            <p>Qofshit një entuziast me përvojë i natyrës apo dikush thjesht i etur për të filluar eksplorimin,
+              AnesMalit është këtu për të ndihmuar në lidhjen e të gjithëve me gjithçka që kanë për të ofruar trojet
+              shqiptare.</p>
+            
           </div>
         </div>
       </div>
@@ -144,7 +170,7 @@
 
   <!--Pjesa e videos-->
   <div style="display:flex; justify-content: center;">
-    <video controls autoplay style="width:1105px;">
+    <video controls autoplay style="width:960px;">
       <source src="bjeshka-e-preilepit-bjeshket-e-nemuna-kosove-easysave.net.mp4" type="video/mp4">
     </video>
   </div>
@@ -181,7 +207,7 @@
 
 
     foreach ($staffComments as $staff) {
-      echo '<div class="testimonial-col" style="margin-right:5px; width: 1200px;">';
+      echo '<div class="testimonial-col" style="margin-left: 60px;width: 960px;">';
       echo '<img src="img/' . strtolower(str_replace(' ', '', $staff['name'])) . '.jpg">';
       echo '<div>';
       echo '<p>' . $staff['comment'] . '</p>';
@@ -246,7 +272,9 @@
           <ul>
             <li><a href="#">+383 44 367 916</a></li>
             <li><a href="mailto:AnesMAlit@gmail.com">AnesMalit@gmail.com</a></li>
-            <li><a href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed"> Lakrishte, Prishtine</a></li>
+            <li><a
+                href="https://maps.google.com/maps?q=Lakrisht%C3%AB,%20Prishtin%C3%AB%2010000&t=k&z=13&ie=UTF8&iwloc=&output=embed">
+                Lakrishte, Prishtine</a></li>
 
           </ul>
         </div>
