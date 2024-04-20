@@ -50,6 +50,8 @@
             </div>
         </div>
 
+        
+
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
@@ -83,9 +85,21 @@
         </div>
     </header>
 
+      <!--Pjesa e Banner-->
+  <section class="tregimet-banner-area" id="about">
+    <div class="container h-100">
+      <div class="tregimet-banner">
+        <div class="text-center">
+          <h1>Tregimet</h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
     <!-- Tregimet content -->
-    <div class="header1">
-        
+    <div class="header1" style="margin-top:-120px;">
+        <div class="coheader">
+            <!--<h1>Tregimet</h1>-->
             <div class="udhetimetf">
                 <div class="udhetimetfcon">
                     <img src="img/Fotonatyre.jpg" height="184" width="319" alt="Keshille">
@@ -106,7 +120,7 @@
 
                     echo $objekti->titull;
                     ?></h4>
-                    <h5 style="margin-top:-8px; text-align:left;">Ne malet e bogës</h5>
+                    <h5 style="margin-top:-8px; text-align:left;">Në malet e Bogës</h5>
                     <p>
                         Sipas gojëdhënave Boga ishte emri i djalit të dytë të Kelmecës (të parit të Kelmendit…). Nga
                         djali i dytë rrodhi fisi i vogël i Bogës, i cili bënte pjesë në Fisin e Kelmendasve. Deri në
@@ -291,7 +305,7 @@ $obj2->printo('Boges');
 ?></h5>
                     <p>
                         Nesi keni vendosur që të shkoni për pushime në mal, për skijim gjatë dimrit, apo për të thithur
-                        ajrin e pastër të Rugovës, atje do të gjeni vednin te quajtur Boge i cili do të jetë shtëpia
+                        ajrin e pastër të Rugovës, atje do të gjeni vendin te quajtur Boge i cili do të jetë shtëpia
                         juaj e dytë.
 
                     </p>
@@ -319,7 +333,7 @@ margin-top:-8px; text-align:left;">Mbremje ne natyre</h5>
 
 
 
-            
+            </div>
         </div>
 
         <!-- Footer -->
