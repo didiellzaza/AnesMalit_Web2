@@ -1,31 +1,36 @@
 <?php
-// Start the session
+
 session_start();
 
-// Default language is English
-$language = "en";
+$language = "al";
 
-// Check if the preferred language is set in the session
 if (isset($_SESSION["preferred_language"])) {
   $language = $_SESSION["preferred_language"];
 } elseif (isset($_COOKIE["preferred_language"])) {
-  // If preferred language is not set in session but set in cookie, use cookie value
+
   $language = $_COOKIE["preferred_language"];
 }
 
-// Output content based on the selected language
-if ($language === "fr") {
-  // Display text in French
-  echo "<h1>Bienvenue sur notre site!</h1>";
-} elseif ($language === "es") {
-  // Display text in Spanish
-  echo "<h1>¡Bienvenido a nuestro sitio!</h1>";
-} else {
-  // Default: Display text in English
-  echo "<h1>Welcome to our website!</h1>";
-  // Set the preferred language in a cookie for future visits
-  setcookie("preferred_language", $language, time() + (86400 * 30), "/"); // 30 days expiration
+
+function setPreferredLanguage($lang)
+{
+
+  $_SESSION["preferred_language"] = $lang;
+
+  setcookie("preferred_language", $lang, time() + (30 * 24 * 60 * 60), "/");
 }
+
+
+if (isset($_GET['lang'])) {
+  $selected_language = $_GET['lang'];
+
+  setPreferredLanguage($selected_language);
+
+  header('Location: ' . $_SERVER['REQUEST_URI']);
+  exit;
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -132,15 +137,27 @@ if ($language === "fr") {
     <div class="main_menu">
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-
           <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
             <ul class="nav navbar-nav menu_nav">
-
-              <li class="nav-item active <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
-              <li class="nav-item <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
-              <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
-              <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakt</a></li>
-              <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregimet</a></li>
+              <?php if ($language === "fr") : ?>
+                <li class="nav-item active <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Accueil</a></li>
+                <li class="nav-item <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogue</a></li>
+                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">À propos de nous</a></li>
+                <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
+                <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Histoires</a></li>
+              <?php elseif ($language === "al") : ?>
+                <li class="nav-item active <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
+                <li class="nav-item <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogu</a></li>
+                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
+                <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakti</a></li>
+                <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregime</a></li>
+              <?php else : ?>
+                <li class="nav-item active <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Home</a></li>
+                <li class="nav-item <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
+                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">About Us</a></li>
+                <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
+                <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Stories</a></li>
+              <?php endif; ?>
             </ul>
           </div>
 
@@ -153,16 +170,26 @@ if ($language === "fr") {
       </nav>
     </div>
 
+    <ul class="social-icons ml-auto">
+      <li><a href="https://www.facebook.com/diellza.raqi.5"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a href="https://www.instagram.com/festina.mjeku/"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="https://twitter.com/AnesMalit"><i class="fab fa-twitter"></i></a></li>
+    </ul>
+    </div>
+    </nav>
+    </div>
+
     <!--Language-->
     <div class="language-selection">
       <form action="save_language.php" method="POST">
-        <label for="language">Select Language:</label>
+        <label for="language">Zgjedh gjuhën:</label>
         <select name="language" id="language">
+          <option value="al">Shqip</option>
           <option value="en">English</option>
-          <option value="fr">French</option>
-          <option value="es">Spanish</option>
+          <option value="fr">Français</option>
+
         </select>
-        <button type="submit">Save</button>
+        <button type="submit">Ruaj</button>
       </form>
     </div>
 
@@ -186,7 +213,7 @@ if ($language === "fr") {
   </main>
 
   <?php
-  // Set the current page variable
+
   $currentPage = basename($_SERVER['PHP_SELF']);
   ?>
 
