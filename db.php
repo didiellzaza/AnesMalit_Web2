@@ -1,7 +1,7 @@
 <?php
 include 'db_konektimi.php';
 
-// Këtu vendosni kodin tuaj për krijimin e tabelave, insertimin, fshirjen ose përditësimin
+
 
 $sql = "CREATE TABLE users (
     uid INT AUTO_INCREMENT PRIMARY KEY,
