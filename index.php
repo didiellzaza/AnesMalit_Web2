@@ -323,6 +323,9 @@ if (isset($_GET['lang'])) {
             <div class="card card-explore">
               <div class="card-explore__img">
                 <img class="card-img" src="img/Camping.jpg" alt="Kampingu">
+                <div class="title"><?php $array = array('Vargmal');
+                                    $a = &$array[0];
+                                    echo $a; ?></div>
               </div>
               <div class="card-body">
                 <h3 class="card-explore__price">50€ <sub>/ 4 ditë</sub></h3>
@@ -339,6 +342,10 @@ if (isset($_GET['lang'])) {
             <div class="card card-explore">
               <div class="card-explore__img">
                 <img class="card-img" src="img/Skijim.jpg" alt="Skijimi">
+                <div class="title"><?php $array = array('Male');
+                                    $a = &$array[0];
+                                    echo $a; ?></div>
+
               </div>
               <div class="card-body">
                 <h3 class="card-explore__price">20€ <sub>/ Një ditë</sub></h3>
@@ -355,6 +362,9 @@ if (isset($_GET['lang'])) {
             <div class="card card-explore">
               <div class="card-explore__img">
                 <img class="card-img" src="img/Ciklizem.jpg" alt="Ciklizmi">
+                <div class="title"><?php $array = array('Pyje');
+                                    $a = &$array[0];
+                                    echo $a; ?></div>
               </div>
               <div class="card-body">
                 <h3 class="card-explore__price">10€ <sub>/ Një ditë</sub></h3>
