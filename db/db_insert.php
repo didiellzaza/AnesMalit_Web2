@@ -1,5 +1,5 @@
 <?php
-include 'db_connect.php';
+include 'db_konektimi.php';
 
 
 $sql = "INSERT INTO evente (titulli, description, event_date, lokacioni) 

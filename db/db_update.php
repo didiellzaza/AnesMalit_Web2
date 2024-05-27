@@ -1,5 +1,5 @@
 <?php
-include 'db_connect.php';
+include 'db_konektimi.php';
 
 
 $sql = "UPDATE evente SET titulli = 'Titulli i ri i eventit', lokacioni = 'Lokacioni i ri' WHERE eid = 1";
