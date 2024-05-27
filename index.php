@@ -45,7 +45,7 @@ if (isset($_GET['lang'])) {
   <link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="libs/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="libs/themify-icons/themify-icons.css">
-  <link rel="stylesheet" href="libs/linericon/style.css">
+  <link rel="stylesheet" href="libs/linericon/stylee.css">
 
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/langstyle.css">
