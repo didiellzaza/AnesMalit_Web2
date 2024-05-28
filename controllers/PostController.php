@@ -1,5 +1,5 @@
 <?php
-require_once 'models/Post.php';
+require_once '../../models/Post.php';
 
 class PostController
 {
