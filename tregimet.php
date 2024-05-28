@@ -5,29 +5,29 @@ session_start();
 $language = "al";
 
 if (isset($_SESSION["preferred_language"])) {
-  $language = $_SESSION["preferred_language"];
+    $language = $_SESSION["preferred_language"];
 } elseif (isset($_COOKIE["preferred_language"])) {
 
-  $language = $_COOKIE["preferred_language"];
+    $language = $_COOKIE["preferred_language"];
 }
 
 
 function setPreferredLanguage($lang)
 {
 
-  $_SESSION["preferred_language"] = $lang;
+    $_SESSION["preferred_language"] = $lang;
 
-  setcookie("preferred_language", $lang, time() + (30 * 24 * 60 * 60), "/");
+    setcookie("preferred_language", $lang, time() + (30 * 24 * 60 * 60), "/");
 }
 
 
 if (isset($_GET['lang'])) {
-  $selected_language = $_GET['lang'];
+    $selected_language = $_GET['lang'];
 
-  setPreferredLanguage($selected_language);
+    setPreferredLanguage($selected_language);
 
-  header('Location: ' . $_SERVER['REQUEST_URI']);
-  exit;
+    header('Location: ' . $_SERVER['REQUEST_URI']);
+    exit;
 }
 
 
@@ -50,11 +50,11 @@ if (isset($_GET['lang'])) {
     <link rel="stylesheet" href="css/langstyle.css">
 
     <style>
-    *{
-        font-family: "Roboto", sans-serif;
-        
-    }
-        </style>
+        * {
+            font-family: "Roboto", sans-serif;
+
+        }
+    </style>
 </head>
 
 <body>
@@ -84,51 +84,54 @@ if (isset($_GET['lang'])) {
             </div>
         </div>
 
-        
+
 
         <div class="main_menu">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container">
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav">
-                        <?php if ($language === "fr"): ?>
-                <li class="nav-item <?php if ($currentPage === 'index.php')
-                  echo 'active'; ?>"><a class="nav-link" href="index.php">Accueil</a></li>
-                <li class="nav-item <?php if ($currentPage === 'blog.php')
-                  echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogue</a></li>
-                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
-                  echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">À propos de nous</a></li>
-                <li class="nav-item <?php if ($currentPage === 'kontakt.php')
-                  echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
-                <li class="nav-item active <?php if ($currentPage === 'tregimet.php')
-                  echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Histoires</a></li>
-
-<!--.-->
-              <?php elseif ($language === "al"): ?>
-                <li class="nav-item  <?php if ($currentPage === 'index.php')
-                  echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
-                <li class="nav-item <?php if ($currentPage === 'blog.php')
-                  echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogu</a></li>
-                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
-                  echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
-                <li class="nav-item <?php if ($currentPage === 'kontakt.php')
-                  echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakti</a></li>
-                <li class="nav-item active <?php if ($currentPage === 'tregimet.php')
-                  echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregime</a></li>
-
-              <?php else: ?>
-                <li class="nav-item <?php if ($currentPage === 'index.php')
-                  echo 'active'; ?>"><a class="nav-link" href="index.php">Home</a></li>
-                <li class="nav-item <?php if ($currentPage === 'blog.php')
-                  echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
-                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
-                  echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">About Us</a></li>
-                <li class="nav-item <?php if ($currentPage === 'kontakt.php')
-                  echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
-                <li class="nav-item active <?php if ($currentPage === 'tregimet.php')
-                  echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Stories</a></li>
-
-              <?php endif; ?>
+                            <?php if ($language === "fr"): ?>
+                                <li class="nav-item <?php if ($currentPage === 'index.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="index.php">Accueil</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'blog.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogue</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">À propos de nous</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'kontakt.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
+                                <li class="nav-item active <?php if ($currentPage === 'tregimet.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Histoires</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'login.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="views/user/login.php">Login</a></li>
+                                <!--.-->
+                            <?php elseif ($language === "al"): ?>
+                                <li class="nav-item  <?php if ($currentPage === 'index.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'blog.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogu</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'kontakt.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakti</a></li>
+                                <li class="nav-item active <?php if ($currentPage === 'tregimet.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregime</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'login.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="views/user/login.php">Login</a></li>
+                            <?php else: ?>
+                                <li class="nav-item <?php if ($currentPage === 'index.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="index.php">Home</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'blog.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">About Us</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'kontakt.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
+                                <li class="nav-item active <?php if ($currentPage === 'tregimet.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Stories</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'login.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="views/user/login.php">Login</a></li>
+                            <?php endif; ?>
                         </ul>
                     </div>
 
@@ -142,16 +145,16 @@ if (isset($_GET['lang'])) {
         </div>
     </header>
 
-      <!--Pjesa e Banner-->
-  <section class="tregimet-banner-area" id="about">
-    <div class="container h-100">
-      <div class="tregimet-banner">
-        <div class="text-center">
-          <h1>Tregimet</h1>
+    <!--Pjesa e Banner-->
+    <section class="tregimet-banner-area" id="about">
+        <div class="container h-100">
+            <div class="tregimet-banner">
+                <div class="text-center">
+                    <h1>Tregimet</h1>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
     <!-- Tregimet content -->
     <div class="header1" style="margin-top:-120px;">
@@ -335,32 +338,34 @@ margin-top:-8px; text-align:left;">Prizreni Naten</h5>
                     <img src="img/Ciklizem.jpg" height="184" width="319" alt="Keshille">
                     <h4 style="text-align:left;">Tregim</h4>
                     <h5 style="
-margin-top:-8px; text-align:left;"><?php
+margin-top:-8px; text-align:left;">
+                        <?php
 
-class klasa1
-{
-    public function printo($string)
-    {
-        echo 'Ne ' . $string . PHP_EOL;
-    }
-}
+                        class klasa1
+                        {
+                            public function printo($string)
+                            {
+                                echo 'Ne ' . $string . PHP_EOL;
+                            }
+                        }
 
-class klasa2 extends klasa1
-{
-    public function printo($string)
-    {
-        echo 'e ' . $string . PHP_EOL;
-    }
-}
+                        class klasa2 extends klasa1
+                        {
+                            public function printo($string)
+                            {
+                                echo 'e ' . $string . PHP_EOL;
+                            }
+                        }
 
-$obj1 = new klasa1();
-$obj2 = new klasa2();
-$obj1->printo('malet ');
+                        $obj1 = new klasa1();
+                        $obj2 = new klasa2();
+                        $obj1->printo('malet ');
 
-$obj2->printo('Boges');
+                        $obj2->printo('Boges');
 
 
-?></h5>
+                        ?>
+                    </h5>
                     <p>
                         Nesi keni vendosur që të shkoni për pushime në mal, për skijim gjatë dimrit, apo për të thithur
                         ajrin e pastër të Rugovës, atje do të gjeni vendin te quajtur Boge i cili do të jetë shtëpia
