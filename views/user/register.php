@@ -1,15 +1,10 @@
 <?php
-
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-
 $currentPage = basename($_SERVER['SCRIPT_NAME']);
-
-
 $language = isset($_SESSION['language']) ? $_SESSION['language'] : 'en';
-
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
     $language = $_POST['language'];
@@ -30,20 +25,55 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
     <link rel="stylesheet" href="../../libs/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="../../libs/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="../../libs/linericon/stylee.css">
-
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../css/langstyle.css">
+    <style>
+        .form-wrapper {
+            padding-top: 180px; 
+            padding-bottom:30px;
+            display: flex;
+            justify-content: center;
+        }
+        .form-container {
+            max-width: 400px;
+            padding: 40px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 
 <body>
     <?php include '../layouts/header.php'; ?>
-    <form action="register.php" method="POST">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="submit" value="Register">
-    </form>
+
+    <div class="form-wrapper">
+        <div class="form-container">
+            <h2>Register</h2>
+            <form action="register.php" method="POST">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form>
+        </div>
+    </div>
+
     <?php include '../layouts/footer.php'; ?>
+
     <script src="../../libs/jquery/jquery-3.2.1.min.js"></script>
     <script src="../../libs/bootstrap/bootstrap.bundle.min.js"></script>
     <script src="../../js/main.js"></script>
