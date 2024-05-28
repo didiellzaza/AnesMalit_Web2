@@ -1,4 +1,4 @@
-< <!--Pjesa e Header-->
+ <!--Pjesa e Header-->
     <header class="header_area">
         <div class="header-top">
             <div class="container">
@@ -35,18 +35,21 @@
                                 <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">À propos de nous</a></li>
                                 <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
                                 <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Histoires</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'login.php') echo 'active'; ?>"><a class="nav-link" href="views/user/login.php">Login</a></li>
                             <?php elseif ($language === "al") : ?>
                                 <li class="nav-item <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
                                 <li class="nav-item <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogu</a></li>
                                 <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
                                 <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakti</a></li>
                                 <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregime</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'login.php') echo 'active'; ?>"><a class="nav-link" href="views/user/login.php">Login</a></li>
                             <?php else : ?>
                                 <li class="nav-item <?php if ($currentPage === 'index.php') echo 'active'; ?>"><a class="nav-link" href="index.php">Home</a></li>
                                 <li class="nav-item <?php if ($currentPage === 'blog.php') echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
                                 <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php') echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">About Us</a></li>
                                 <li class="nav-item <?php if ($currentPage === 'kontakt.php') echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
                                 <li class="nav-item <?php if ($currentPage === 'tregimet.php') echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Stories</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'login.php') echo 'active'; ?>"><a class="nav-link" href="views/user/login.php">Login</a></li>
                             <?php endif; ?>
                         </ul>
                     </div>

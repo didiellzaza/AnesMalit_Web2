@@ -1,5 +1,4 @@
 <?php
-require_once 'libs/ErrorHandler.php';
 require_once 'models/Post.php';
 
 class PostController
