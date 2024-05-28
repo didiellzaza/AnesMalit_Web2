@@ -5,29 +5,29 @@ session_start();
 $language = "al";
 
 if (isset($_SESSION["preferred_language"])) {
-  $language = $_SESSION["preferred_language"];
+    $language = $_SESSION["preferred_language"];
 } elseif (isset($_COOKIE["preferred_language"])) {
 
-  $language = $_COOKIE["preferred_language"];
+    $language = $_COOKIE["preferred_language"];
 }
 
 
 function setPreferredLanguage($lang)
 {
 
-  $_SESSION["preferred_language"] = $lang;
+    $_SESSION["preferred_language"] = $lang;
 
-  setcookie("preferred_language", $lang, time() + (30 * 24 * 60 * 60), "/");
+    setcookie("preferred_language", $lang, time() + (30 * 24 * 60 * 60), "/");
 }
 
 
 if (isset($_GET['lang'])) {
-  $selected_language = $_GET['lang'];
+    $selected_language = $_GET['lang'];
 
-  setPreferredLanguage($selected_language);
+    setPreferredLanguage($selected_language);
 
-  header('Location: ' . $_SERVER['REQUEST_URI']);
-  exit;
+    header('Location: ' . $_SERVER['REQUEST_URI']);
+    exit;
 }
 
 
@@ -85,44 +85,47 @@ if (isset($_GET['lang'])) {
                 <div class="container">
                     <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
                         <ul class="nav navbar-nav menu_nav">
-                        <?php if ($language === "fr"): ?>
-                <li class="nav-item  <?php if ($currentPage === 'index.php')
-                  echo 'active'; ?>"><a class="nav-link" href="index.php">Accueil</a></li>
-                <li class="nav-item active <?php if ($currentPage === 'blog.php')
-                  echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogue</a></li>
-                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
-                  echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">À propos de nous</a></li>
-                <li class="nav-item <?php if ($currentPage === 'kontakt.php')
-                  echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
-                <li class="nav-item <?php if ($currentPage === 'tregimet.php')
-                  echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Histoires</a></li>
-
-<!--.-->
-              <?php elseif ($language === "al"): ?>
-                <li class="nav-item <?php if ($currentPage === 'index.php')
-                  echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
-                <li class="nav-item active <?php if ($currentPage === 'blog.php')
-                  echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogu</a></li>
-                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
-                  echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
-                <li class="nav-item <?php if ($currentPage === 'kontakt.php')
-                  echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakti</a></li>
-                <li class="nav-item <?php if ($currentPage === 'tregimet.php')
-                  echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregime</a></li>
-
-              <?php else: ?>
-                <li class="nav-item <?php if ($currentPage === 'index.php')
-                  echo 'active'; ?>"><a class="nav-link" href="index.php">Home</a></li>
-                <li class="nav-item active <?php if ($currentPage === 'blog.php')
-                  echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
-                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
-                  echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">About Us</a></li>
-                <li class="nav-item <?php if ($currentPage === 'kontakt.php')
-                  echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
-                <li class="nav-item <?php if ($currentPage === 'tregimet.php')
-                  echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Stories</a></li>
-
-              <?php endif; ?>
+                            <?php if ($language === "fr"): ?>
+                                <li class="nav-item  <?php if ($currentPage === 'index.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="index.php">Accueil</a></li>
+                                <li class="nav-item active <?php if ($currentPage === 'blog.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogue</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">À propos de nous</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'kontakt.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'tregimet.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Histoires</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'login.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="views/user/login.php">Login</a></li>
+                                <!--.-->
+                            <?php elseif ($language === "al"): ?>
+                                <li class="nav-item <?php if ($currentPage === 'index.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="index.php">Ballina</a></li>
+                                <li class="nav-item active <?php if ($currentPage === 'blog.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogu</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">Rreth nesh</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'kontakt.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Kontakti</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'tregimet.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregime</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'login.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="views/user/login.php">Login</a></li>
+                            <?php else: ?>
+                                <li class="nav-item <?php if ($currentPage === 'index.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="index.php">Home</a></li>
+                                <li class="nav-item active <?php if ($currentPage === 'blog.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="blog.php">Blog</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">About Us</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'kontakt.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'tregimet.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Stories</a></li>
+                                <li class="nav-item <?php if ($currentPage === 'login.php')
+                                    echo 'active'; ?>"><a class="nav-link" href="views/user/login.php">Login</a></li>
+                            <?php endif; ?>
                         </ul>
                     </div>
 
@@ -249,7 +252,9 @@ if (isset($_GET['lang'])) {
                                         </a>
                                         <p>Kete Gusht organizuam Kampin Internacional
                                             ne Rugove, me pjesetare nga mbare Evropa.</p>
-                                            <a class="button button-blog" href="blog-artikulli.php" style="border-radius: 0; width:210px; height: 40px; justify-content-center; align-items-center;">Shiko artikullin e plote</a>
+                                        <a class="button button-blog" href="blog-artikulli.php"
+                                            style="border-radius: 0; width:210px; height: 40px; justify-content-center; align-items-center;">Shiko
+                                            artikullin e plote</a>
 
                                     </div>
                                 </div>
@@ -297,7 +302,9 @@ if (isset($_GET['lang'])) {
                                         </a>
                                         <p>Gjate punetorise Yoga, u befasuam me pjesemarresit nga thuajse te gjitha
                                             kategorite e moshave.</p>
-                                        <a class="button button-blog" href="blog-artikulli.php" style="border-radius: 0; width:205px; height: 40px; justify-content-center; align-items-center;">Shiko artikullin e
+                                        <a class="button button-blog" href="blog-artikulli.php"
+                                            style="border-radius: 0; width:205px; height: 40px; justify-content-center; align-items-center;">Shiko
+                                            artikullin e
                                             plote</a>
                                     </div>
                                 </div>
@@ -344,7 +351,9 @@ if (isset($_GET['lang'])) {
                                             <h2>A ka me mire se me e nise veren me hiking ne Brod?</h2>
                                         </a>
                                         <p>22 Qershorin e kaluam duke ecur maleve te Brodit.</p>
-                                        <a class="button button-blog" href="blog-artikulli.php" style="border-radius: 0; width:210px; height: 40px; justify-content-center; align-items-center;">Shiko artikullin e
+                                        <a class="button button-blog" href="blog-artikulli.php"
+                                            style="border-radius: 0; width:210px; height: 40px; justify-content-center; align-items-center;">Shiko
+                                            artikullin e
                                             plote</a>
                                     </div>
                                 </div>

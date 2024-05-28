@@ -63,9 +63,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                <button type="submit" class="btn btn-primary btn-block" style="background-color:#eebc4c; border:none">Login</button>
             </form>
-            <button onclick="location.href='register.php'" class="btn btn-secondary btn-block mt-3">New? Register!</button>
+            <button onclick="location.href='register.php'" class="btn btn-secondary btn-block mt-3" style="background-color:#a8824e; border:none">New? Register!</button>
         </div>
     </div>
 
