@@ -1,58 +1,44 @@
 <?php
 include 'db_konektimi.php';
 
+// Create an instance of the Database class
+$database = new Database();
+$conn = $database->getConnection();
 
-$sql = "UPDATE evente SET titulli = 'Titulli i ri i eventit', lokacioni = 'Lokacioni i ri' WHERE eid = 1";
+if ($conn) {
+    // Check if the post table exists
+    $checkTable = $conn->query("SHOW TABLES LIKE 'post'");
+    if ($checkTable->rowCount() == 0) {
+        // Table does not exist, create it
+        $sql = "CREATE TABLE IF NOT EXISTS post (
+            post_id INT AUTO_INCREMENT PRIMARY KEY,
+            user_id INT NOT NULL,
+            title VARCHAR(255) NOT NULL,
+            content TEXT NOT NULL,
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (user_id) REFERENCES users(uid)
+        )";
 
-if ($conn->query($sql) === TRUE) {
-    echo "Rreshti u përditësua me sukses në tabelën 'evente'!<br>";
+        if ($conn->query($sql) === TRUE) {
+            echo "Tabela 'post' u krijua me sukses!<br>";
+        } else {
+            echo "Gabim gjatë krijimit të tabelës 'post': " . $conn->$error . "<br>";
+        }
+    } else {
+        // Table exists, perform update or modifications if needed
+        echo "Tabela 'post' ekziston tashmë.<br>";
+        // Example of an update: Adding a new column
+        $sql = "ALTER TABLE post ADD COLUMN new_column VARCHAR(255) NULL";
+
+        if ($conn->query($sql) === TRUE) {
+            echo "Kolona 'new_column' u shtua me sukses në tabelën 'post'!<br>";
+        } else {
+            echo "Gabim gjatë shtimit të kolonës në tabelën 'post': " . $conn->$error . "<br>";
+        }
+    }
+
+    // Close the connection
+    $conn = null;
 } else {
-    echo "Gabim gjatë përditësimit të rreshtit në tabelën 'evente': " . $conn->error . "<br>";
+    echo "Database connection could not be established.";
 }
-
-
-$sql = "UPDATE regjistrimi SET user_id = 2, event_id = 2 WHERE rid = 1";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Rreshti u përditësua me sukses në tabelën 'regjistrimi'!<br>";
-} else {
-    echo "Gabim gjatë përditësimit të rreshtit në tabelën 'regjistrimi': " . $conn->error . "<br>";
-}
-
-$sql = "UPDATE blogu SET titulli = 'Titulli i ri i blogut', kontenti = 'Përmbajtja e re e blogut' WHERE bid = 1";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Rreshti u përditësua me sukses në tabelën 'blogu'!<br>";
-} else {
-    echo "Gabim gjatë përditësimit të rreshtit në tabelën 'blogu': " . $conn->error . "<br>";
-}
-
-
-$sql = "UPDATE komente SET kontenti = 'Komenti i ri në blog' WHERE kid = 1";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Rreshti u përditësua me sukses në tabelën 'komente'!<br>";
-} else {
-    echo "Gabim gjatë përditësimit të rreshtit në tabelën 'komente': " . $conn->error . "<br>";
-}
-
-
-$sql = "UPDATE tregime SET titulli = 'Titulli i ri i tregimit', kontenti = 'Përmbajtja e re e tregimit' WHERE tid = 1";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Rreshti u përditësua me sukses në tabelën 'tregime'!<br>";
-} else {
-    echo "Gabim gjatë përditësimit të rreshtit në tabelën 'tregime': " . $conn->error . "<br>";
-}
-
-
-$sql = "UPDATE kontakti SET emri = 'Emri i ri', email = 'email@personi.com', mesazhi = 'Mesazhi i ri' WHERE id = 1";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Rreshti u përditësua me sukses në tabelën 'kontakti'!<br>";
-} else {
-    echo "Gabim gjatë përditësimit të rreshtit në tabelën 'kontakti': " . $conn->error . "<br>";
-}
-
-
-$conn->close();
