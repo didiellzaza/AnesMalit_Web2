@@ -1,4 +1,3 @@
-
 <?php
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
@@ -30,8 +29,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
     <link rel="stylesheet" href="../../css/langstyle.css">
     <style>
         .form-wrapper {
-            padding-top: 180px; 
-            padding-bottom:30px;
+            padding-top: 180px;
+            padding-bottom: 30px;
             display: flex;
             justify-content: center;
         }
@@ -55,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
     <div class="form-wrapper">
         <div class="form-container">
             <h2>Login</h2>
-            <form action="register.php" method="POST">
+            <form action="login.php" method="POST">
                 <div class="form-group">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
@@ -66,6 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
                 </div>
                 <button type="submit" class="btn btn-primary btn-block">Login</button>
             </form>
+            <button onclick="location.href='register.php'" class="btn btn-secondary btn-block mt-3">New? Register!</button>
         </div>
     </div>
 

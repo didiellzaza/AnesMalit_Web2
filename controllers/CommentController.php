@@ -1,5 +1,5 @@
 <?php
-require_once 'models/Comment.php';
+require_once '../../models/Comment.php';
 
 class CommentController
 {

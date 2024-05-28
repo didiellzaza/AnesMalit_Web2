@@ -1,6 +1,6 @@
 <?php
-require_once 'db_konektimi.php';
-require_once 'controllers/CommentController.php';
+require_once '../../db/db_konektimi.php';
+require_once '../../controllers/CommentController.php';
 
 $database = new Database();
 $db = $database->getConnection();

@@ -56,6 +56,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
             <h2>Register</h2>
             <form action="register.php" method="POST">
                 <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Repeat e-mail:</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="form-group">
                     <label for="username">Username:</label>
                     <input type="text" id="username" name="username" class="form-control" placeholder="Username" required>
                 </div>
@@ -63,12 +71,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
                     <label for="password">Password:</label>
                     <input type="password" id="password" name="password" class="form-control" placeholder="Password" required>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
-                </div>
                 <button type="submit" class="btn btn-primary btn-block">Register</button>
             </form>
+            <button onclick="location.href='login.php'" class="btn btn-secondary btn-block mt-3">Have an account? Login!</button>
         </div>
     </div>
 
