@@ -112,8 +112,6 @@ if (isset($_GET['lang'])) {
                   echo 'active'; ?>"><a class="nav-link" href="tregimet.php">Tregime</a></li>
                 <li class="nav-item <?php if ($currentPage === 'login.php')
                   echo 'active'; ?>"><a class="nav-link" href="views/user/login.php">Login</a></li>
-                <li class="nav-item <?php if ($currentPage === 'login.php')
-                  echo 'active'; ?>"><a class="nav-link" href="views/user/login.php">Login</a></li>
               <?php else: ?>
                 <li class="nav-item  <?php if ($currentPage === 'index.php')
                   echo 'active'; ?>"><a class="nav-link" href="index.php">Home</a></li>
