@@ -150,7 +150,7 @@ if (isset($_GET['lang'])) {
         <div class="container h-100">
             <div class="tregimet-banner">
                 <div class="text-center">
-                    <h1>Tregimet</h1>
+                    <h1>Tregime</h1>
                 </div>
             </div>
         </div>

@@ -372,7 +372,7 @@ if (isset($_GET['lang'])) {
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
-                            <p>Casual fan of touching grass :)
+                            <p>Fan of touching grass :)
                             </p>
                             <div class="br"></div>
                         </aside>
