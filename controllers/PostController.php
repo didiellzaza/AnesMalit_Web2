@@ -16,6 +16,7 @@ class PostController
         $this->postModel->title = $data['title'];
         $this->postModel->content = $data['content'];
 
+
         if ($this->postModel->create()) {
             echo "Post created successfully!";
         } else {
