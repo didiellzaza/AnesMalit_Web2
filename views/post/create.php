@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Anes Malit</title>
+    <title>Create Post - Anes Malit</title>
 
     <link rel="icon" href="../../img/favicon.png" type="image/png">
     <link rel="stylesheet" href="../../libs/bootstrap/bootstrap.min.css">
@@ -40,11 +40,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
         }
 
         .content-container {
-            max-width: 400px;
+            max-width: 600px;
             padding: 40px;
             border: 1px solid #ddd;
             border-radius: 5px;
             background-color: #f9f9f9;
+        }
+
+        .content-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-container input[type="text"],
+        .content-container textarea,
+        .content-container input[type="file"] {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .content-container input[type="submit"] {
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .content-container input[type="submit"]:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -54,20 +81,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
 
     <div class="content-wrapper">
         <div class="container content-container">
-            <h2>Posts</h2>
-            
-            <?php
-            // Ensure $posts is defined and not empty
-            if (isset($posts) && !empty($posts)) {
-                foreach ($posts as $post) {
-                    echo "<h3>" . htmlspecialchars($post['title']) . "</h3>";
-                    echo "<p>" . nl2br(htmlspecialchars($post['content'])) . "</p>";
-                    echo "<hr>";
-                }
-            } else {
-                echo "<p>No posts available.</p>";
-            }
-            ?>
+            <h2>Create Post</h2>
+            <form action="create_post.php" method="POST" enctype="multipart/form-data">
+                <input type="text" name="title" placeholder="Title" required>
+                <textarea name="content" placeholder="Content" required></textarea>
+                <input type="file" name="image">
+                <input type="submit" value="Create Post">
+            </form>
         </div>
     </div>
 
