@@ -398,17 +398,19 @@ if (isset($_GET['lang'])) {
                     <div class="blog_right_sidebar">
                         <aside class="single_sidebar_widget search_widget">
                             <!--Buton per krijim te postimeve-->
-                            <div class="input-group" >
-                                <span class="input-group-btn">
-                                    <button class="btn btn-primary" type="button"
-                                        onclick="location.href='views/post/create.php'"
-                                        style="border-radius: 0px; border:none; background-color:#a8824e; display: flex; align-items: center;">
-                                        <img src="img/edit.png" alt="Edit Icon"
-                                            style="width: 20px; height: 20px; margin-right: 5px;">
-                                        Krijo Postimin Tend
-                                    </button>
-                                </span>
-                            </div>
+                            <div class="input-group">
+    <span class="input-group-btn" style="width: 100%;">
+        <button class="btn btn-primary" type="button"
+            onclick="location.href='views/post/create.php'"
+            style="border-radius: 0px; border: none; background-color: #a8824e; display: flex; align-items: center; justify-content: center; width: 100%;">
+            <img src="img/edit.png" alt="Edit Icon"
+                style="width: 20px; height: 20px; margin-right: 5px;">
+            Krijo Postimin Tend
+        </button>
+    </span>
+</div>
+
+
 
 
 
@@ -418,7 +420,7 @@ if (isset($_GET['lang'])) {
                         <aside class="single_sidebar_widget author_widget">
                             <img class="author_img rounded-circle" src="img/diellza.jpg" alt style="width:100px;">
                             <h4>Diellza Raçi</h4>
-                            <p>Bloggere e AnesMalit</p>
+                            <p style="display: flex; align-items: center; justify-content: center">Bloggere e AnesMalit</p>
                             <div class="social_icon">
                                 <a href="https://www.facebook.com/diellza.raqi.5">
                                     <i class="fab fa-facebook-f"></i>
@@ -430,7 +432,7 @@ if (isset($_GET['lang'])) {
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
-                            <p>Fan of touching grass :)
+                            <p style="display: flex; align-items: center; justify-content: center">Fan of touching grass :)
                             </p>
                             <div class="br"></div>
                         </aside>
