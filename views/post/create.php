@@ -93,12 +93,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
         <div class="row">
             <div class="col-lg-8">
                 <div class="content-container">
-                    <h2>Create Post</h2>
+                    <h2>Krijo Postim</h2>
                     <form action="create_post.php" method="POST" enctype="multipart/form-data">
-                        <input type="text" name="title" placeholder="Title" required>
-                        <textarea name="content" placeholder="Content" required></textarea>
+                        <input type="text" name="title" placeholder="Titulli" required>
+                        <textarea name="content" placeholder="Shkruaj..." required></textarea>
                         <input type="file" name="image">
-                        <input type="submit" value="Create Post" style="background-color:#a8824e">
+                        <input type="submit" value="Posto" style="background-color:#a8824e">
                     </form>
                 </div>
             </div>

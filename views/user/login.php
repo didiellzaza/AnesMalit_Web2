@@ -1,14 +1,33 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
+
+session_start();
+
+$language = "al";
+
+if (isset($_SESSION["preferred_language"])) {
+  $language = $_SESSION["preferred_language"];
+} elseif (isset($_COOKIE["preferred_language"])) {
+
+  $language = $_COOKIE["preferred_language"];
 }
 
-$currentPage = basename($_SERVER['SCRIPT_NAME']);
-$language = isset($_SESSION['language']) ? $_SESSION['language'] : 'en';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
-    $language = $_POST['language'];
-    $_SESSION['language'] = $language;
+function setPreferredLanguage($lang)
+{
+
+  $_SESSION["preferred_language"] = $lang;
+
+  setcookie("preferred_language", $lang, time() + (30 * 24 * 60 * 60), "/");
+}
+
+
+if (isset($_GET['lang'])) {
+  $selected_language = $_GET['lang'];
+
+  setPreferredLanguage($selected_language);
+
+  header('Location: ' . $_SERVER['REQUEST_URI']);
+  exit;
 }
 ?>
 <!DOCTYPE html>

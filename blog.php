@@ -91,7 +91,8 @@ if (isset($_GET['lang'])) {
                                 <li class="nav-item active <?php if ($currentPage === 'blog.php')
                                     echo 'active'; ?>"><a class="nav-link" href="blog.php">Blogue</a></li>
                                 <li class="nav-item <?php if ($currentPage === 'rreth-nesh.php')
-                                    echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">À propos de nous</a></li>
+                                    echo 'active'; ?>"><a class="nav-link" href="rreth-nesh.php">À propos de nous</a>
+                                </li>
                                 <li class="nav-item <?php if ($currentPage === 'kontakt.php')
                                     echo 'active'; ?>"><a class="nav-link" href="kontakt.php">Contact</a></li>
                                 <li class="nav-item <?php if ($currentPage === 'tregimet.php')
@@ -396,15 +397,20 @@ if (isset($_GET['lang'])) {
                 <div class="col-lg-4">
                     <div class="blog_right_sidebar">
                         <aside class="single_sidebar_widget search_widget">
-                            <!--Search bar per kerkim te postimeve-->
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Kerko postime">
+                            <!--Buton per krijim te postimeve-->
+                            <div class="input-group" >
                                 <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
-                                        <i class="lnr lnr-magnifier"></i>
+                                    <button class="btn btn-primary" type="button"
+                                        onclick="location.href='views/post/create.php'"
+                                        style="border-radius: 0px; border:none; background-color:#a8824e; display: flex; align-items: center;">
+                                        <img src="img/edit.png" alt="Edit Icon"
+                                            style="width: 20px; height: 20px; margin-right: 5px;">
+                                        Krijo Postimin Tend
                                     </button>
                                 </span>
                             </div>
+
+
 
                             <div class="br"></div>
                         </aside>

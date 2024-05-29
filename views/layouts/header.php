@@ -9,7 +9,7 @@
                     <div class="ml-auto d-none d-md-block d-md-flex">
                         <!--Language-->
                         <div class="language-selection">
-                            <form action="../..//save_language.php" method="POST">
+                            <form action="../layouts/lang.php" method="POST">
                                 <label for="language">Zgjedh gjuhën:</label>
                                 <select name="language" id="language">
                                     <option value="al" <?php echo $language == 'al' ? 'selected' : ''; ?>>Shqip</option>

@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
 
     <div class="content-wrapper">
         <div class="container content-container">
-            <h2>Posts</h2>
+            <h2>Postimet</h2>
 
             <?php
             // Ensure $posts is defined and not empty
@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['language'])) {
                     echo "<hr>";
                 }
             } else {
-                echo "<p>No posts available.</p>";
+                echo "<p>Asnje postim per te shfaqur.</p>";
             }
             ?>
         </div>
